@@ -1,0 +1,48 @@
+.registerForm {
+    margin: auto;
+    width: 50%;
+    border: 3px ;
+    padding: 10px;
+}
+
+.registerRedirect{
+    text-align: right;
+}
+
+.singInHeader{
+    max-width: 700px;
+    background-color: #00B98E;
+}
+
+.singInH1{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.singUpLink{
+    font-weight: bold;
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.loginButton{
+    font-weight: bold;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.input{
+    max-width: 400px;
+    margin-left:190px;
+}
+
+.label{
+    max-width: 400px;
+    margin-left:215px;
+}
+
+.loginDiv{
+    margin-top: 94px;
+    margin-bottom: 70px;
+}
+
