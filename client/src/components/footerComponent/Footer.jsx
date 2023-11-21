@@ -1,5 +1,7 @@
 import styles from './Footer.module.css'
 
+import FormFooter from './FormFooter'
+
 export default function Footer() {
     return (
         <footer className={`${styles['footer-distributed']} ${styles.footerDiv}`}>
@@ -19,21 +21,9 @@ export default function Footer() {
                 <div className={styles.sloganP}>
                     <p className={styles['footer-company-name']}>© 2023 Author: Yordan Dochev - Softuni React project</p>
                 </div>
-                {/* <div className={styles['footer-icons']}>
-                    <a className="btn btn-square mx-1" href="www.facebook.com"><i className="fab fa-facebook-f"></i></a>
-                    <a className="btn btn-square mx-1" href=""><i className="fab fa-twitter"></i></a>
-                    <a className="btn btn-square mx-1" href=""><i className="fab fa-instagram"></i></a>
-                </div> */}
             </div>
-            <div className={styles['footer-right']}>
-                <form action="#" method="post">
-
-                    <h4>Your opinion matters to us</h4>
-
-                    <textarea className={styles.commentTextArea}name="message" placeholder="Comment" defaultValue={""} />
-                    <button>Comment</button>
-                </form>
-            </div>
+        
+            <FormFooter />
         </footer>
     )
 }

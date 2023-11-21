@@ -1,22 +1,19 @@
-import HeaderHomePage from "./headerHomePage"
-import SearchHomePage from "./SearchHomePage"
-import HotOffersHomePage from "./HotOffersHomePage"
-import OurAgentsHomePage from "./OurAgentsHomePage"
+import HeaderHome from "./HeaderHome"
+import Search from "./Search"
+import HotOffers from "./HotOffers"
 
 import CommentsCarousel from "./Comments"
 
 function Home() {
   return (
   <>
-        <HeaderHomePage/>
+        <HeaderHome/>
 
-        {/* Search page optional */}
-        <SearchHomePage/> 
+        <Search/> 
         
-        <HotOffersHomePage/>
+        <HotOffers/>
 
         <CommentsCarousel/>
-        {/* <OurAgentsHomePage/> */}
 
   </>
   )

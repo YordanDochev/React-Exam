@@ -1,6 +1,6 @@
 import styles from './Home.module.css'
 
-export default function SearchHomePage() {
+export default function Search() {
     return (
         <>
             <div className={`container-fluid bg-primary mb-5 wow fadeIn ${styles.searchDiv}`} data-wow-delay="0.1s" >

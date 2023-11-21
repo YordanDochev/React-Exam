@@ -1,7 +1,8 @@
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import styles from './Home.module.css'; // Make sure to import your styles
+import styles from './Home.module.css';
+import ComentItem from './ComentItem';
 
 const CommentsCarousel = () => {
     const testimonials = [
@@ -64,23 +65,7 @@ const CommentsCarousel = () => {
                 <div className={`testimonial-carousel wow fadeInUp ${styles.userComentDiv}`} data-wow-delay="0.1s">
                     <Slider {...carouselSettings}>
                         {testimonials.map((testimonial) => (
-                            <div key={testimonial.id} className="testimonial-item bg-light rounded p-3">
-                                <div className="bg-white border rounded p-4">
-                                    <p>{testimonial.text}</p>
-                                    <div className="d-flex align-items-center">
-                                        <img
-                                            className={`img-fluid flex-shrink-0 rounded ${styles.imgUserComment}`}
-                                            src={testimonial.imageUrl}
-                                            alt={`Client ${testimonial.id}`}
-                                        />
-                                        <div className="ps-3">
-                                            <h6 className="fw-bold mb-1">{testimonial.firstName}</h6>
-                                            <h6 className="fw-bold mb-1">{testimonial.lastName}</h6>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
+                            <ComentItem {...testimonial}/>
                         ))}
                     </Slider>
                 </div>

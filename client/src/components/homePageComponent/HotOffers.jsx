@@ -1,4 +1,4 @@
-export default function HotOffersHomePage(){
+export default function HotOffers(){
     return(
         <div className="container-xxl py-5">
             <div className="container">
