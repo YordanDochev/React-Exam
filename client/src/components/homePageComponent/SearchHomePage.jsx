@@ -1,7 +1,9 @@
+import styles from './Home.module.css'
+
 export default function SearchHomePage() {
     return (
-        <div>
-            <div className="container-fluid bg-primary mb-5 wow fadeIn" data-wow-delay="0.1s" style={{ padding: 35 }}>
+        <>
+            <div className={`container-fluid bg-primary mb-5 wow fadeIn ${styles.searchDiv}`} data-wow-delay="0.1s" >
                 <div className="container">
                     <div className="row g-2">
                         <div className="col-md-10">
@@ -25,7 +27,7 @@ export default function SearchHomePage() {
                 </div>
             </div>
             {/* TO DO : show there are no content if do not have matches */}
-            <div className="container-xxl py-5">
+            {/* <div className="container-xxl py-5">
                 <div className="container">
                     <div className="row g-4">
                         <div className="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -118,8 +120,7 @@ export default function SearchHomePage() {
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-
+            </div> */}
+        </>
     )
 }

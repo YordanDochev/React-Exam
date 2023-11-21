@@ -18,6 +18,7 @@ export default function HotOffersHomePage(){
                             </li>
                         </ul>
                     </div>
+                    
                 </div>
                 <div className="tab-content">
                     <div id="tab-1" className="tab-pane fade show p-0 active">
@@ -41,6 +42,7 @@ export default function HotOffersHomePage(){
                                     </div>
                                 </div>
                             </div>
+                        
                             <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                                 <div className="property-item rounded overflow-hidden">
                                     <div className="position-relative overflow-hidden">

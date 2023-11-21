@@ -50,9 +50,9 @@ const CommentsCarousel = () => {
         <div className="container-xxl py-5">
             <div className="container">
                 <div
-                    className="text-center mx-auto mb-5 wow fadeInUp"
+                    className={`text-center mx-auto mb-5 wow fadeInUp ${styles.divComment}`}
                     data-wow-delay="0.1s"
-                    style={{ maxWidth: 600 }}
+                    
                 >
                     <h1 className="mb-3">Our Clients Say!</h1>
                     <p>
@@ -61,7 +61,7 @@ const CommentsCarousel = () => {
                         dolor duo.
                     </p>
                 </div>
-                <div className={`testimonial-carousel wow fadeInUp ${styles.commentDiv}`} data-wow-delay="0.1s">
+                <div className={`testimonial-carousel wow fadeInUp ${styles.userComentDiv}`} data-wow-delay="0.1s">
                     <Slider {...carouselSettings}>
                         {testimonials.map((testimonial) => (
                             <div key={testimonial.id} className="testimonial-item bg-light rounded p-3">
@@ -69,10 +69,9 @@ const CommentsCarousel = () => {
                                     <p>{testimonial.text}</p>
                                     <div className="d-flex align-items-center">
                                         <img
-                                            className="img-fluid flex-shrink-0 rounded"
+                                            className={`img-fluid flex-shrink-0 rounded ${styles.imgUserComment}`}
                                             src={testimonial.imageUrl}
                                             alt={`Client ${testimonial.id}`}
-                                            style={{ width: 45, height: 45 }}
                                         />
                                         <div className="ps-3">
                                             <h6 className="fw-bold mb-1">{testimonial.firstName}</h6>

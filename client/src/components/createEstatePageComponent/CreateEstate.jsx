@@ -1,14 +1,15 @@
-import FormCreateEstate from './FormCreateEstate'
+import FormEstate from './Form'
+import HeaderCreate from './HeaderCreate'
 
 export default function CreateEstate() {
     return (
         <>
 
                 {/* Header Start */}
-                
+                <HeaderCreate/>
                 {/* Header End */}
                 {/* Contact Start */}
-                <FormCreateEstate/>
+                <FormEstate/>
                 {/* Contact End */}
                 
         </>

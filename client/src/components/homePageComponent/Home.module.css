@@ -1,10 +1,23 @@
-.commentDiv button
+.userComentDiv button
 {
     background-color: #00B98E;
 
 }
 
-.commentDiv{
+.userComentDiv{
     width: 700px;
     margin-left: 300px
+}
+
+.searchDiv{
+    padding: 35px
+}
+
+.divComment{
+    max-width: 600px
+}
+
+.imgUserComment{
+    height: 45px;
+    width: 45px;
 }

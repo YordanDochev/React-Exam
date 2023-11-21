@@ -14,7 +14,7 @@ export default function App() {
             <div className="container-xxl bg-white p-0">
                 <Navigation />
                 {/* <Spinenr/> */}
-                <Home />
+                {/* <Home /> */}
                 {/* <Catalog/> */}
 
                 {/* <Register /> */}
@@ -22,7 +22,7 @@ export default function App() {
 
                 {/* <Details/> */}
 
-                {/* <CreateEstate /> */}
+                <CreateEstate />
                 <Footer />
                 <a href="#" className="btn btn-lg btn-primary btn-lg-square back-to-top">
                     <i className="bi bi-arrow-up" />

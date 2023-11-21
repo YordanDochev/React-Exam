@@ -1,6 +1,6 @@
-import ContactAgentCatalog from "./ContactAgentCatalog";
+import OurAgents from "./OurAgents";
 import HeaderCatalog from "./HeaderCatalog";
-import ListImotsCatalog from "./ListImotsCatalog";
+import ListCatalog from "./ListCatalog";
 import SearchCatalog from "./SearchCatalog";
 
 export default function Catalog() {
@@ -14,10 +14,10 @@ export default function Catalog() {
                 <SearchCatalog/>
                 {/* Search End */}
                 {/* Property List Start */}
-                <ListImotsCatalog/>
+                <ListCatalog/>
                 {/* Property List End */}
                 {/* Call to Action Start */}
-                <ContactAgentCatalog/>
+                <OurAgents/>
                 {/* Call to Action End */}
         </>
     );
