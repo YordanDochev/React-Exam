@@ -9,7 +9,7 @@ export default function ComentItem({
     lastName
 }) {
     return (
-        <div key={id} className="testimonial-item bg-light rounded p-3">
+        <div className="testimonial-item bg-light rounded p-3">
             <div className="bg-white border rounded p-4">
                 <p>{text}</p>
                 <div className="d-flex align-items-center">

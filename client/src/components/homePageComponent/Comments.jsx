@@ -65,7 +65,7 @@ const CommentsCarousel = () => {
                 <div className={`testimonial-carousel wow fadeInUp ${styles.userComentDiv}`} data-wow-delay="0.1s">
                     <Slider {...carouselSettings}>
                         {testimonials.map((testimonial) => (
-                            <ComentItem {...testimonial}/>
+                            <ComentItem key={testimonial.id} {...testimonial}/>
                         ))}
                     </Slider>
                 </div>

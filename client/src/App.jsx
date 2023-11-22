@@ -1,3 +1,5 @@
+import { Routes, Route } from 'react-router-dom'
+
 import Home from "./components/homePageComponent/Home"
 import CreateEstate from "./components/CreateEstatePageComponent/CreateEstate";
 import Navigation from "./components/navigationComponent/Navigation";
@@ -10,24 +12,23 @@ import Spinenr from "./components/spinnerComponent/Spinner";
 
 export default function App() {
     return (
-        <>
-            <div className="container-xxl bg-white p-0">
-                <Navigation />
-                {/* <Spinenr/> */}
-                {/* <Home /> */}
-                {/* <Catalog/> */}
+        <div className="container-xxl bg-white p-0">
+            <Navigation />
+            <Routes>
+                <Route path='/' element={<Home />} />
+                <Route path='/catalog' element={<Catalog />} />
+                <Route path='/register' element={<Register />} />
+                <Route path='/login' element={<Login />} />
+                <Route path='/create-estate' element={<CreateEstate />} />
+                <Route path='/details' element={<Details />} />
+            </Routes>
+            {/* <Spinenr/> */}
 
-                {/* <Register /> */}
-                <Login/>
 
-                {/* <Details/> */}
-
-                {/* <CreateEstate /> */}
-                <Footer />
-                <a href="#" className="btn btn-lg btn-primary btn-lg-square back-to-top">
-                    <i className="bi bi-arrow-up" />
-                </a>
-            </div>
-        </>
+            <Footer />
+            <a href="#" className="btn btn-lg btn-primary btn-lg-square back-to-top">
+                <i className="bi bi-arrow-up" />
+            </a>
+        </div>
     )
 }

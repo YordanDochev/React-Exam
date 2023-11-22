@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function HeaderHome(){
     return(
         <div className="container-fluid header bg-white p-0">
@@ -11,12 +13,12 @@ export default function HeaderHome(){
                 Vero elitr justo clita lorem. Ipsum dolor at sed stetsit diam no. Kasd
                 rebum ipsum et diam justo clita et kasd rebum sea elitr.
               </p>
-              <a
-                href=""
+              <Link
+                to={'/register'}
                 className="btn btn-primary py-3 px-5 me-3 animated fadeIn"
               >
                 Get Started
-              </a>
+              </Link>
             </div>
             <div className="col-md-6 animated fadeIn">
             <img className= "img-fluid" src="src/assets/img/about.jpg"/>

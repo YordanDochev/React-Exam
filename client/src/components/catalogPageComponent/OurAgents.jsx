@@ -2,7 +2,7 @@ import styles from "./Catalog.module.css"
 
 export default function OurAgents() {
     return (
-            <div className="container">
+            <div className="container" style={{marginBottom:"40px"}}>
                 <div className={`${styles.ourAgentsDiv} text-center mx-auto mb-5 wow fadeInUp`} data-wow-delay="0.1s">
                     <h1 className="mb-3">Property Agents</h1>
                     <p>Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
