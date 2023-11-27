@@ -33,23 +33,23 @@ export default function FormEstate() {
 
                 </Row>
                 <Row>
-                    <Form.Group className="mb-3" controlId="formGridAddress1">
+                    <Form.Group className="mb-3" >
                         <Form.Label>Address</Form.Label>
                         <Form.Control placeholder="1234 Main St" />
                     </Form.Group>
                 </Row>
                 <Row className="mb-3">
-                    <Form.Group as={Col} controlId="formGridCity">
+                    <Form.Group as={Col} >
                         <Form.Label>Metters</Form.Label>
                         <Form.Control />
                     </Form.Group>
 
-                    <Form.Group as={Col} controlId="formGridCity">
+                    <Form.Group as={Col} >
                         <Form.Label>Room</Form.Label>
                         <Form.Control />
                     </Form.Group>
 
-                    <Form.Group as={Col} controlId="formGridZip">
+                    <Form.Group as={Col} >
                         <Form.Label>Bath</Form.Label>
                         <Form.Control />
                     </Form.Group>
@@ -57,7 +57,10 @@ export default function FormEstate() {
 
                 </Row>
                 <Row className="mb-3">
-                    <FloatingLabel controlId="floatingTextarea2" label="Comments" >
+                    <Form.Label>Description</Form.Label>
+
+                    <FloatingLabel>
+
                         <Form.Control
                             as="textarea"
                             placeholder="Leave a comment here"
@@ -66,7 +69,7 @@ export default function FormEstate() {
                     </FloatingLabel>
                 </Row>
                 <Row className="mb-3">
-                    <Form.Group as={Col} controlId="formGridState">
+                    <Form.Group as={Col} >
                         <Form.Label>Type</Form.Label>
                         <Form.Select defaultValue="Choose...">
                             <option>Choose...</option>
@@ -74,9 +77,15 @@ export default function FormEstate() {
                         </Form.Select>
 
                     </Form.Group>
-                    <Form.Group as={Col} controlId="formGridZip">
+                    <Form.Group as={Col}>
                         <Form.Label>Price</Form.Label>
                         <Form.Control />
+                    </Form.Group>
+                </Row>
+                <Row>
+                    <Form.Group className="mb-3" >
+                        <Form.Label>Location</Form.Label>
+                        <Form.Control placeholder="County, City" />
                     </Form.Group>
                 </Row>
                 <Row>
