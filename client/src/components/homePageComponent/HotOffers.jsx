@@ -1,6 +1,17 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
+import * as estateService from '../../services/estateService'
+
 export default function HotOffers(){
+    const [estates,setEstates] = useState([])
+
+    useEffect(()=>{
+        estateService.getAll()
+            .then(setEstates)
+    },[])
+
+
     return(
         <div className="container-xxl py-5">
             <div className="container">
