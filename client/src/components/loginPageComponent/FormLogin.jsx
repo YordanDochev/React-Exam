@@ -1,5 +1,7 @@
 import styles from './Login.module.css'
 import useForm from '../../hooks/useForm'
+import { useContext } from 'react'
+import AuthContext from '../../contexts/authContext'
 
 const initialValues = {
     email: '',
@@ -8,9 +10,7 @@ const initialValues = {
 
 export default function FormLogin() {
 
-    const loginSubmitHandler = (values) => {
-        console.log(values);
-    }
+    const {loginSubmitHandler} = useContext(AuthContext)
 
     const { values, onChangeHandler, onSubmit } = useForm(initialValues, loginSubmitHandler)
 

@@ -9,19 +9,22 @@ import Catalog from "./components/catalogPageComponent/Catalog";
 import Register from "./components/RegisterPageComponent/Register"
 import Login from "./components/loginPageComponent/Loing"
 import Spinenr from "./components/spinnerComponent/Spinner";
+import { AuthProvider } from './contexts/authContext';
 
 export default function App() {
     return (
         <div className="container-xxl bg-white p-0">
             <Navigation />
-            <Routes>
-                <Route path='/' element={<Home />} />
-                <Route path='/catalog' element={<Catalog />} />
-                <Route path='/register' element={<Register />} />
-                <Route path='/login' element={<Login />} />
-                <Route path='/create-estate' element={<CreateEstate />} />
-                <Route path='/details' element={<Details />} />
-            </Routes>
+            <AuthProvider>
+                <Routes>
+                    <Route path='/' element={<Home />} />
+                    <Route path='/catalog' element={<Catalog />} />
+                    <Route path='/register' element={<Register />} />
+                    <Route path='/login' element={<Login />} />
+                    <Route path='/create-estate' element={<CreateEstate />} />
+                    <Route path='/details' element={<Details />} />
+                </Routes>
+            </AuthProvider>
             {/* <Spinenr/> */}
 
 

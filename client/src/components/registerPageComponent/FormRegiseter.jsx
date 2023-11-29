@@ -1,5 +1,7 @@
+import { useContext } from 'react'
 import useForm from '../../hooks/useForm'
 import styles from './Register.module.css'
+import AuthContext from '../../contexts/authContext';
 
 const initialValues = {
     email: '',
@@ -10,10 +12,8 @@ const initialValues = {
 }
 
 export default function FormRegister() {
-
-    const registerSubmitHanler = (values) => {
-        console.log(values);
-    }
+    const {registerSubmitHanler} = useContext(AuthContext);
+    
     const { values, onChangeHandler, onSubmit } = useForm(initialValues, registerSubmitHanler)
 
     return (
@@ -31,7 +31,7 @@ export default function FormRegister() {
                             value={values.email}
                             onChange={onChangeHandler}
                         />
-                        <label htmlFor="email">Email</label>
+                        <label htmlFor="email">Email </label>
                     </div>
                 </div>
                 <div className="col-md-6">
