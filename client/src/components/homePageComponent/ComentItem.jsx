@@ -11,7 +11,6 @@ export default function ComentItem({
     return (
         <div className="testimonial-item bg-light rounded p-3">
             <div className="bg-white border rounded p-4">
-                <p>{text}</p>
                 <div className="d-flex align-items-center">
                     <img
                         className={`img-fluid flex-shrink-0 rounded ${styles.imgUserComment}`}
@@ -24,6 +23,7 @@ export default function ComentItem({
                     </div>
 
                 </div>
+                <p style={{paddingTop:'10px'}}>{text}</p>
             </div>
         </div>
     )

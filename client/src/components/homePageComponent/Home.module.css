@@ -1,11 +1,7 @@
 
 .userComentDiv{
-    width: 700px;
-    margin-left: 300px
-}
-
-.searchDiv{
-    padding: 35px
+    width: 1000px;
+    margin-left: 140px
 }
 
 .divComment{
@@ -15,4 +11,16 @@
 .imgUserComment{
     height: 45px;
     width: 45px;
+}
+
+.assestDiv {
+    padding: 10px 35px 10px 35px;
+    display: inline-block;
+}
+
+
+.ourAssestHeaderDiv {
+    width: 263px;
+    float: right;
+    margin: 20px;
 }
