@@ -1,8 +1,22 @@
 import styles from './Login.module.css'
+import useForm from '../../hooks/useForm'
+
+const initialValues = {
+    email: '',
+    password: ''
+}
 
 export default function FormLogin() {
+
+    const loginSubmitHandler = (values) => {
+        console.log(values);
+    }
+
+    const { values, onChangeHandler, onSubmit } = useForm(initialValues, loginSubmitHandler)
+
+
     return (
-        <form>
+        <form onSubmit={onSubmit}>
 
             <div id="inputDiv" className="row g-3">
                 <div className="col-12">
@@ -10,19 +24,25 @@ export default function FormLogin() {
                         <input
                             type="text"
                             className={`form-control ${styles.input}`}
-                            id="subject"
-                            placeholder="Username"
+                            id="email"
+                            name="email"
+                            placeholder="Email"
+                            value={values.email}
+                            onChange={onChangeHandler}
                         />
-                        <label className={styles.label} htmlFor="subject">Username</label>
+                        <label className={styles.label} htmlFor="email">Email</label>
                     </div>
                 </div>
                 <div className="col-12">
                     <div className="form-floating">
                         <input
-                            type="text"
+                            type="password"
                             className={`form-control ${styles.input}`}
                             id="subject"
+                            name="password"
                             placeholder="Password"
+                            value={values.password}
+                            onChange={onChangeHandler}
                         />
                         <label className={styles.label} htmlFor="subject">Password</label>
                     </div>
