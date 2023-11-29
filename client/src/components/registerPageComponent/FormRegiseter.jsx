@@ -1,21 +1,37 @@
+import useForm from '../../hooks/useForm'
 import styles from './Register.module.css'
 
+const initialValues = {
+    email: '',
+    firstName: '',
+    lastName: '',
+    password: '',
+    rePassword: ''
+}
+
 export default function FormRegister() {
+
+    const registerSubmitHanler = (values) => {
+        console.log(values);
+    }
+    const { values, onChangeHandler, onSubmit } = useForm(initialValues, registerSubmitHanler)
+
     return (
-
-
-        <form>
+        <form onSubmit={onSubmit}>
 
             <div className="row g-3">
                 <div className="col-12">
                     <div className="form-floating">
                         <input
                             type="text"
+                            name='email'
                             className="form-control"
                             id="subject"
-                            placeholder="Username"
+                            placeholder="Email"
+                            value={values.email}
+                            onChange={onChangeHandler}
                         />
-                        <label htmlFor="subject">Username</label>
+                        <label htmlFor="email">Email</label>
                     </div>
                 </div>
                 <div className="col-md-6">
@@ -23,43 +39,55 @@ export default function FormRegister() {
                         <input
                             type="text"
                             className="form-control"
-                            id="name"
+                            name='firstName'
+                            id="firstName"
                             placeholder="First Name"
+                            value={values.firstName}
+                            onChange={onChangeHandler}
                         />
-                        <label htmlFor="name">First Name</label>
+                        <label htmlFor="firstName">First Name</label>
                     </div>
                 </div>
                 <div className="col-md-6">
                     <div className="form-floating">
                         <input
-                            type="email"
+                            type="text"
                             className="form-control"
-                            id="email"
+                            id="lastName"
+                            name="lastName"
                             placeholder="Last Name"
+                            value={values.lastName}
+                            onChange={onChangeHandler}
                         />
-                        <label htmlFor="email">Last Name</label>
+                        <label htmlFor="lastName">Last Name</label>
                     </div>
                 </div>
                 <div className="col-12">
                     <div className="form-floating">
                         <input
-                            type="text"
+                            type="password"
                             className="form-control"
-                            id="subject"
+                            id="password"
+                            name="password"
                             placeholder="Password"
+                            value={values.password}
+                            onChange={onChangeHandler}
                         />
-                        <label htmlFor="subject">Password</label>
+                        <label htmlFor="password">Password</label>
                     </div>
                 </div>
                 <div className="col-12">
                     <div className="form-floating">
                         <input
-                            type="text"
+                            type="password"
                             className="form-control"
-                            id="subject"
+                            id="rePassword"
+                            name="rePassword"
                             placeholder=">Repeat Password"
+                            value={values.rePassword}
+                            onChange={onChangeHandler}
                         />
-                        <label htmlFor="subject">Repeat Password</label>
+                        <label htmlFor="rePassword">Repeat Password</label>
                     </div>
                 </div>
                 <div className="col-12">

@@ -1356,7 +1356,7 @@
     			rooms: "5",
     			bath: "5",
     			location: "Las Vegas",
-    			_createdOn: 1616236790262,
+    			_createdOn: 1612236790262,
     			_updatedOn: 1616236792930
     		},
     		"ff9b0a0f-65sd-45d7-9857-0a60a6gc2cm4": {
@@ -1375,7 +1375,7 @@
     			rooms: "7",
     			bath: "6",
     			location: "Tropez, France",
-    			_createdOn: 1616236790262,
+    			_createdOn: 1616236790260,
     			_updatedOn: 1616236792930
     		},
             "ff9b0a0f-65sd-45d7-9817-0a60a6gc2cm4": {
@@ -1389,12 +1389,31 @@
     			},
     			address: "Pampelonne",
     			description: "This villa is appreciated for its large interior spaces of 500 sqm and 10,000 sqm garden offering an exceptional panoramic sea view. This villa has the most pleasant outdoor spaces. A large park including sculptures and Art creations by Richard Serra, Jeff Koons, Urs Fisher or even Frantz West as well as terraces with a large table and a bar for the delight of your summer evenings.This modern villa accommodates up to 14 guests, with 7 en-suite bedrooms including a children’s bedroom for 3 with bunk bed, an open living room with direct access to the swimming pool, a kitchen and an apartment with 2 double bedrooms. There are also 3 bedrooms for your staff and a second kitchen for the chef.",
-    			types: "Villa",
+    			types: "Apartment",
     			meters: "500 m²",
     			rooms: "7",
     			bath: "6",
     			location: "Tropez, France",
-    			_createdOn: 1616236790262,
+    			_createdOn: 1616230790262,
+    			_updatedOn: 1616236792930
+    		},
+            "ff9b0a0f-65sd-45d7-9817-0a60a6gsc2cm4": {
+    			_id: "ff9b0a0f-65sd-45d7-9857-0a60a6gc2cm4",
+    			title: "Modern Art-Filled Villa near Club 55 and Nikki Beach in Pampelonne",
+    			price: "6,112,000",
+    			image: {
+    				first: "https://ml5vpmchq2rr.i.optimole.com/w:1920/h:1080/q:mauto/https://iconprivatecollection.com/wp-content/uploads/2022/11/Villa-Ama-St-Tropez-20.jpeg",
+    				second: "https://ml5vpmchq2rr.i.optimole.com/w:auto/h:auto/q:mauto/https://iconprivatecollection.com/wp-content/uploads/2022/11/Villa-Ama-St-Tropez-16.jpeg",
+    				thrid: "https://ml5vpmchq2rr.i.optimole.com/w:auto/h:auto/q:mauto/https://iconprivatecollection.com/wp-content/uploads/2022/11/Villa-Ama-St-Tropez-5.jpeg"
+    			},
+    			address: "Pampelonne",
+    			description: "This villa is appreciated for its large interior spaces of 500 sqm and 10,000 sqm garden offering an exceptional panoramic sea view. This villa has the most pleasant outdoor spaces. A large park including sculptures and Art creations by Richard Serra, Jeff Koons, Urs Fisher or even Frantz West as well as terraces with a large table and a bar for the delight of your summer evenings.This modern villa accommodates up to 14 guests, with 7 en-suite bedrooms including a children’s bedroom for 3 with bunk bed, an open living room with direct access to the swimming pool, a kitchen and an apartment with 2 double bedrooms. There are also 3 bedrooms for your staff and a second kitchen for the chef.",
+    			types: "Garage",
+    			meters: "500 m²",
+    			rooms: "7",
+    			bath: "6",
+    			location: "Tropez, France",
+    			_createdOn: 1616236190262,
     			_updatedOn: 1616236792930
     		},
     	}
