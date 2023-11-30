@@ -6,7 +6,6 @@ import AuthContext from '../../contexts/authContext'
 
 export default function Navigation() {
     const { isAuthenticated,logoutSubmitHandler } = useContext(AuthContext)
-    console.log(isAuthenticated);
     return (
         <div className="container-fluid nav-bar bg-transparent">
             <nav className="navbar navbar-expand-lg bg-white navbar-light py-0 px-4">
@@ -29,7 +28,7 @@ export default function Navigation() {
                         )}
                     </div>
                     {isAuthenticated && (
-                        <Link to="/logout" className="btn btn-primary px-3 d-none d-lg-flex" onClick={logoutSubmitHandler}>LOGUT</Link>
+                        <button className="btn btn-primary px-3 d-none d-lg-flex" onClick={logoutSubmitHandler}>LOGUT</button>
 
                     )}
 

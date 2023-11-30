@@ -5,6 +5,10 @@ import FormEstate from './Form'
 import HeaderCreate from './HeaderCreate'
 
 export default function CreateEstate() {
+    const createSubmitHandler = (values) => {
+        console.log(values);
+    }
+
     return (
         <div className="container-fluid header bg-white p-0">
             <HeaderCreate />
@@ -19,7 +23,7 @@ export default function CreateEstate() {
                     </div>
                     <div className={`col-md-6 ${style.createForm}`}>
                         <div className="wow fadeInUp" data-wow-delay="0.5s" >
-                            <FormEstate />
+                            <FormEstate createSubmitHandler={createSubmitHandler} />
                         </div>
 
                     </div>

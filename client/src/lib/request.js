@@ -11,7 +11,6 @@ const buildOptions = (data) =>{
     const auth = JSON.parse(localStorage.getItem('Auth'))
 
     const token = auth?.accessToken;
-    console.log(token);
 
     if(token){
         options.headers = {

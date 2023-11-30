@@ -10,6 +10,7 @@ export default function HotOffers(){
     useEffect(()=>{
         estateService.getAll()
             .then(setEstates)
+            .catch(err => console.log(err))
     },[])
 
 
