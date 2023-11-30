@@ -21,3 +21,5 @@ export const login = async ({email,password}) => {
 
     return response;
 };
+
+export const logout = async () => await request.get(`${baseUrl}/logout`)

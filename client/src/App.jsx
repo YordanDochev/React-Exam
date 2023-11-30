@@ -14,8 +14,8 @@ import { AuthProvider } from './contexts/authContext';
 export default function App() {
     return (
         <div className="container-xxl bg-white p-0">
-            <Navigation />
             <AuthProvider>
+                <Navigation />
                 <Routes>
                     <Route path='/' element={<Home />} />
                     <Route path='/catalog' element={<Catalog />} />
