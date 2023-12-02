@@ -1,9 +1,77 @@
 import { Link } from "react-router-dom";
+import { useEffect, useReducer, useState } from "react";
 
+import * as estateService from '../../services/estateService'
 import styles from './Home.module.css'
 
+const reducer = (state, action) => {
+    switch (action.type) {
+        case "GET_COUNT_VILLAS":
+            return {
+                ...state,
+                villas: action.payload
+            }
+        case "GET_COUNT_APARTMENTS":
+            return {
+                ...state,
+                apartments: action.payload
+            }
+        case "GET_COUNT_OFFICES":
+            return {
+                ...state,
+                offices: action.payload
+            }
+        case "GET_COUNT_GARAGES":
+            return {
+                ...state,
+                garages: action.payload
+            }
+
+        default:
+            return state;
+    }
+}
 
 export default function HeaderHome(){
+    const [state,dispatch] =  useReducer(reducer,{})
+
+    useEffect(() => {
+        estateService.getCountVillas()
+            .then((count) => {
+                dispatch({
+                    type: "GET_COUNT_VILLAS",
+                    payload: count
+                })
+            })
+            .catch(err => console.log(err))
+
+        estateService.getCountApartments()
+            .then((count) => {
+                dispatch({
+                    type: "GET_COUNT_APARTMENTS",
+                    payload: count
+                })
+            })
+            .catch(err => console.log(err))
+
+        estateService.getCountOffices()
+            .then((count) => {
+                dispatch({
+                    type: "GET_COUNT_OFFICES",
+                    payload: count
+                })
+            })
+            .catch(err => console.log(err))
+
+        estateService.getCountGarages()
+            .then((count) => {
+                dispatch({
+                    type: "GET_COUNT_GARAGES",
+                    payload: count
+                })
+            })
+            .catch(err => console.log(err))
+    }, [])
 
     return(
         <div className="container-fluid header bg-white p-0">
@@ -37,7 +105,7 @@ export default function HeaderHome(){
                                     <img className="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlLv5-pwJD2K69KrC8DggmFMmtwXiPRRu6KTHY2MbOdv1gZiT6jmsklxhOgao&s" style={{width:'45px',height:'45px',}} alt="Icon" />
                                 </div>
                                 <h6>Garage</h6>
-                                <span>123 Properties</span>
+                                <span>{state.garages} Properties</span>
                             </div>
                         </a>
                     </div>
@@ -48,7 +116,7 @@ export default function HeaderHome(){
                                     <img className="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyJ1Yve6AEFmdp0Q-FVyBQ9BDio4zHvpFYAsIf2P1yf7p07XQpz_2pmoRTkw&s" style={{width:'45px',height:'45px',}} alt="Icon" />
                                 </div>
                                 <h6>Office</h6>
-                                <span>123 Properties</span>
+                                <span>{state.offices} Properties</span>
                             </div>
                         </a>
                     </div>
@@ -59,7 +127,7 @@ export default function HeaderHome(){
                                     <img className="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR20vlZZPvhq6nkIEhwnD_6OngJ2qps3mrgeznH7BV0F5vovKTn-U9m2UlZLRQ&s" style={{width:'45px',height:'45px',}} alt="Icon" />
                                 </div>
                                 <h6>Appartments</h6>
-                                <span>123 Properties</span>
+                                <span>{state.apartments} Properties</span>
                             </div>
                         </a>
                     </div>
@@ -72,7 +140,7 @@ export default function HeaderHome(){
                                     <img className="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyFLwsZJj3V8QOTbGCq0sn5r5IIbKrO994JwzSTtG_DYSWsxYVKS4OmrTTDN4&s" style={{width:'45px',height:'45px',}} alt="Icon" />
                                 </div>
                                 <h6>Villas</h6>
-                                <span>123 Properties</span>
+                                <span>{state.villas} Properties</span>
                             </div>
                         </a>
                     </div>

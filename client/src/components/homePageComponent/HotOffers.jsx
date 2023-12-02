@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { useEffect, useReducer, useState } from "react";
+import { useEffect, useReducer } from "react";
+
 import * as estateService from '../../services/estateService'
 
 import Villa from "./hotOffers-items/Villa";

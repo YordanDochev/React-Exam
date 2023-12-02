@@ -41,3 +41,27 @@ export const getLatesGarage = async () =>{
 
     return result;
 }
+
+export const getCountVillas = async () => {
+    const count = await request.get(`${baseUrl}?where=types Like "Villa"&count`)
+
+    return count;
+}
+
+export const getCountApartments = async () => {
+    const count = await request.get(`${baseUrl}?where=types Like "Apartment"&count`)
+
+    return count;
+}
+
+export const getCountOffices = async () => {
+    const count = await request.get(`${baseUrl}?where=types Like "Office"&count`)
+
+    return count;
+}
+
+export const getCountGarages = async () => {
+    const count = await request.get(`${baseUrl}?where=types Like "Garage"&count`)
+
+    return count;
+}
