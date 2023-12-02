@@ -13,3 +13,31 @@ export const create = async (estateData) => {
 
     return result
 }
+
+export const getLatesVillas = async () =>{
+
+    const result = await request.get(`${baseUrl}?where=types Like "Villa"&sortBy=_createdOn decs&offset=0&pageSize=3`)
+
+    return result;
+}
+
+export const getLatesApartment = async () =>{
+
+    const result = await request.get(`${baseUrl}?where=types Like "Apartment"&sortBy=_createdOn decs&offset=0&pageSize=3`)
+
+    return result;
+}
+
+export const getLatesOffice = async () =>{
+
+    const result = await request.get(`${baseUrl}?where=types Like "Office"&sortBy=_createdOn decs&offset=0&pageSize=3`)
+
+    return result;
+}
+
+export const getLatesGarage = async () =>{
+
+    const result = await request.get(`${baseUrl}?where=types Like "Garage"&sortBy=_createdOn decs&offset=0&pageSize=3`)
+
+    return result;
+}

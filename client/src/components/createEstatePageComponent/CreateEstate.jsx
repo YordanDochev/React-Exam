@@ -1,4 +1,4 @@
-import {useNavigate} from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 import style from './CreateEstate.module.css'
 import * as estateService from "../../services/estateService"
@@ -6,11 +6,13 @@ import * as estateService from "../../services/estateService"
 import FormEstate from './Form'
 import HeaderCreate from './HeaderCreate'
 
+
 export default function CreateEstate() {
     const navigate = useNavigate();
 
     const createSubmitHandler = async (values) => {
         try {
+            
             await estateService.create(values)
 
             navigate('/catalog')
