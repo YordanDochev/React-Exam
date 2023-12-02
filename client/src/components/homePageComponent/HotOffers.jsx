@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect, useReducer, useState } from "react";
 import * as estateService from '../../services/estateService'
 
 import Villa from "./hotOffers-items/Villa";
@@ -7,32 +7,88 @@ import Apartment from "./hotOffers-items/Apartment";
 import Garage from "./hotOffers-items/Garage";
 import Office from "./hotOffers-items/Office";
 
+const initialState = {
+    villas: [],
+    apartments: [],
+    offices: [],
+    garages: [],
+};
+
+const reducer = (state, action) => {
+    switch (action.type) {
+        case "GET_LATES_VILLAS":
+            return {
+                ...state,
+                villas: action.payload
+            }
+        case "GET_LATES_APARTMENTS":
+            return {
+                ...state,
+                apartments: action.payload
+            }
+        case "GET_LATES_OFFICES":
+            return {
+                ...state,
+                offices: action.payload
+            }
+        case "GET_LATES_GARAGES":
+            return {
+                ...state,
+                garages: action.payload
+            }
+
+        default:
+            return state;
+    }
+}
 
 export default function HotOffers() {
-    const [villas, setVillas] = useState([])
-    const [apartments, setApartments] = useState([])
-    const [offices, setOffices] = useState([])
-    const [garages, setGarages] = useState([])
+    // const [villas, setVillas] = useState([])
+    // const [apartments, setApartments] = useState([])
+    // const [offices, setOffices] = useState([])
+    // const [garages, setGarages] = useState([])
+
+    const [state, dispatch] = useReducer(reducer, initialState)
 
 
     useEffect(() => {
         estateService.getLatesVillas()
-            .then(setVillas)
+            .then((villas) => {
+                dispatch({
+                    type: "GET_LATES_VILLAS",
+                    payload: villas
+                })
+            })
             .catch(err => console.log(err))
 
         estateService.getLatesApartment()
-            .then(setApartments)
+            .then((result) => {
+                dispatch({
+                    type: "GET_LATES_APARTMENTS",
+                    payload: result
+                })
+            })
             .catch(err => console.log(err))
 
         estateService.getLatesOffice()
-            .then(setOffices)
+            .then((result) => {
+                dispatch({
+                    type: "GET_LATES_OFFICES",
+                    payload: result
+                })
+            })
             .catch(err => console.log(err))
 
         estateService.getLatesGarage()
-            .then(setGarages)
+            .then((result) => {
+                dispatch({
+                    type: "GET_LATES_GARAGES",
+                    payload: result
+                })
+            })
             .catch(err => console.log(err))
     }, [])
-
+    
     return (
         <div className="container-xxl py-5">
             <div className="container">
@@ -65,26 +121,26 @@ export default function HotOffers() {
                 <div className="tab-content">
                     <div id="tab-1" className="tab-pane fade show p-0 active">
                         <div className="row g-4" >
-                            {villas.map(villa => <Villa key={villa._id} villa={villa} />)}
+                            {state.villas.map(villa => <Villa key={villa._id} villa={villa} />)}
                         </div>
                     </div>
 
                     <div id="tab-2" className="tab-pane fade show p-0">
                         <div className="row g-4" >
-                            {apartments.map(apartment => <Apartment key={apartment._id} apartment={apartment} />)}
+                            {state.apartments.map(apartment => <Apartment key={apartment._id} apartment={apartment} />)}
                         </div>
                     </div>
                     <div id="tab-3" className="tab-pane fade show p-0">
                         <div className="row g-4" >
-                            {offices.map(office => <Office key={office._id} office={office} />)}
+                            {state.offices.map(office => <Office key={office._id} office={office} />)}
                         </div>
                     </div>
                     <div id="tab-4" className="tab-pane fade show p-0">
                         <div className="row g-4" >
-                            {garages.map(garage => <Garage key={garage._id} garage={garage} />)}
+                            {state.garages.map(garage => <Garage key={garage._id} garage={garage} />)}
                         </div>
                     </div>
-                    <div className="col-12 text-center wow fadeInUp" data-wow-delay="0.1s" style={{paddingTop:'30px'}}>
+                    <div className="col-12 text-center wow fadeInUp" data-wow-delay="0.1s" style={{ paddingTop: '30px' }}>
                         <Link to="/catalog" className="btn btn-primary py-3 px-5" href="">Browse More Property</Link>
                     </div>
                 </div>
