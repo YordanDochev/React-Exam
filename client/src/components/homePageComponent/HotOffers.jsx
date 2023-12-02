@@ -2,9 +2,10 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import * as estateService from '../../services/estateService'
 
-import EstateItem from "./EstatesItem";
 import Villa from "./hotOffers-items/Villa";
 import Apartment from "./hotOffers-items/Apartment";
+import Garage from "./hotOffers-items/Garage";
+import Office from "./hotOffers-items/Office";
 
 
 export default function HotOffers() {
@@ -24,17 +25,11 @@ export default function HotOffers() {
             .catch(err => console.log(err))
 
         estateService.getLatesOffice()
-            .then((result) => setOffices({
-                ...offices,
-                result
-            }))
+            .then(setOffices)
             .catch(err => console.log(err))
 
         estateService.getLatesGarage()
-            .then((result) => setGarages({
-                ...garages,
-                result
-            }))
+            .then(setGarages)
             .catch(err => console.log(err))
     }, [])
 
@@ -77,6 +72,16 @@ export default function HotOffers() {
                     <div id="tab-2" className="tab-pane fade show p-0">
                         <div className="row g-4" >
                             {apartments.map(apartment => <Apartment key={apartment._id} apartment={apartment} />)}
+                        </div>
+                    </div>
+                    <div id="tab-3" className="tab-pane fade show p-0">
+                        <div className="row g-4" >
+                            {offices.map(office => <Office key={office._id} office={office} />)}
+                        </div>
+                    </div>
+                    <div id="tab-4" className="tab-pane fade show p-0">
+                        <div className="row g-4" >
+                            {garages.map(garage => <Garage key={garage._id} garage={garage} />)}
                         </div>
                     </div>
                     <div className="col-12 text-center wow fadeInUp" data-wow-delay="0.1s" style={{paddingTop:'30px'}}>

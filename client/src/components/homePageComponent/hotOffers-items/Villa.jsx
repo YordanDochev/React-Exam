@@ -10,7 +10,7 @@ export default function Villa({
             <div className="property-item rounded overflow-hidden">
                 <div className="position-relative overflow-hidden">
                     <a href=""><img className="img-fluid" src={villa.mainPhoto} alt="" style={{width:"100%",height:"270px"}} /></a>
-                    <div className="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Rent</div>
+                    <div className="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Sell</div>
                     <div className="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">{villa.types}</div>
                 </div>
                 <div className="p-4 pb-0">

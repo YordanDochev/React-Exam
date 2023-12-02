@@ -1622,6 +1622,28 @@
         _createdOn: 1613231320262,
         _updatedOn: 1616236792930,
       },
+      "addaas12-1912-asde-51c1-gjt243f13fh1t": {
+        _id: "addaas12-1912-asde-51c1-gjt243f13fh1t",
+        title:
+          "Premier Garages in Vienna for Your Automotive Bliss",
+        price: "50,000",
+        mainPhoto:
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTv-LG6nJgcm_y-dPV-BvMFlg1m6K8NwO83sZKaZhIAAHjVHf3fLA2RCFPKlw&s",
+        secondPhoto:
+          "https://www.garageliving.com/hs-fs/hubfs/cleveland-garage-after.jpg?width=960&name=cleveland-garage-after.jpgg",
+        thirdPhoto:
+          "https://www.garageliving.com/hs-fs/hubfs/garage-before-and-after-211014_VAN_006_RET.jpg?width=1200&name=garage-before-and-after-211014_VAN_006_RET.jpg",
+        address: "Landstraße district",
+        description:
+          "Secure your vehicles with style in this exclusive garage located in Vienna's Landstraße district. Accommodating up to two cars, this space offers both functionality and elegance. With a private room and bath, it provides convenience and privacy for your automotive needs. Enjoy the luxury of a centrally located garage, combining sophistication and practicality in the heart of Vienna.",
+        types: "Garage",
+        meters: "100 ",
+        rooms: "1",
+        baths: "1",
+        location: "Vinna, Austria",
+        _createdOn: 1613231313362,
+        _updatedOn: 1616236792930,
+      },
     },
   };
   var rules$1 = {
