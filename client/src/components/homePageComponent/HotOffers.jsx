@@ -44,11 +44,6 @@ const reducer = (state, action) => {
 }
 
 export default function HotOffers() {
-    // const [villas, setVillas] = useState([])
-    // const [apartments, setApartments] = useState([])
-    // const [offices, setOffices] = useState([])
-    // const [garages, setGarages] = useState([])
-
     const [state, dispatch] = useReducer(reducer, initialState)
 
 
@@ -96,7 +91,7 @@ export default function HotOffers() {
                 <div className="row g-0 gx-5 align-items-end">
                     <div className="col-lg-6">
                         <div className="text-start mx-auto mb-5 wow slideInLeft" data-wow-delay="0.1s">
-                            <h1 className="mb-3">Hot Offers</h1>
+                            <h1 className="mb-3">Lates Offers</h1>
                         </div>
                     </div>
                     <div className="col-lg-6 text-start text-lg-end wow slideInRight" data-wow-delay="0.1s">

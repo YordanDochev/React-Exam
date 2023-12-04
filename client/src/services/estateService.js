@@ -8,6 +8,12 @@ export const getAll = async () => {
     return estates
 }
 
+export const getOne = async (estateId) => {
+    const estate = await request.get(`${baseUrl}/${estateId}`)
+
+    return estate
+}
+
 export const create = async (estateData) => {
     const result = await request.post(baseUrl,estateData)
 

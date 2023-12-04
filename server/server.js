@@ -1542,7 +1542,7 @@
         mainPhoto:
           "https://images.unsplash.com/photo-1612637968894-660373e23b03?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YXBhcnRtZW50JTIwYnVpbGRpbmd8ZW58MHx8MHx8fDA%3D",
         secondPhoto:
-          "https://www.shutterstock.com/image-illustration/modern-contemporary-kitchen-room-interior-white-1494694931",
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTySw-BkTG01teYevszBejJuw7w3RgN8vDef7FyRd9y0z--NRG2SEqZpJMZZA&s",
         thirdPhoto:
           "https://images.pexels.com/photos/271618/pexels-photo-271618.jpeg?auto=compress&cs=tinysrgb&w=1600",
         address: "Potsdamer Platz",

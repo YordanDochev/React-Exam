@@ -3,12 +3,26 @@ import styles from './Details.module.css'
 import Carousel from 'react-bootstrap/Carousel';
 import Button from 'react-bootstrap/Button';
 
-export default function DetailInformation() {
+export default function DetailInformation({
+    title,
+    price,
+    mainPhoto,
+    secondPhoto,
+    thirdPhoto,
+    address,
+    description,
+    types,
+    meters,
+    rooms,
+    baths,
+    location,
+    owner
+}) {
     return (
         <div className="container-xxl py-5">
             <div className="container">
                 <div className="row g-5 align-items-center">
-                    <h1 className={`mb-4 ${styles.h1Header}`}>#1 Place To Find The Perfect Property</h1>
+                    <h1 className={`mb-4 ${styles.h1Header}`}>{title}</h1>
                     <div className={`row gy-4 ${styles.headerInformation}`} >
                         <div className="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.1s">
                             <div className="bg-light rounded p-3">
@@ -19,7 +33,7 @@ export default function DetailInformation() {
                                     <div className={`${styles.headerInformationDiv} icon me-3`} >
                                         <i className="fa fa-map-marker-alt text-primary" />
                                     </div>
-                                    <span>Location: 123 Street, New York, USA</span>
+                                    <span>Location: {address}, {location}</span>
                                 </div>
                             </div>
                         </div>
@@ -31,7 +45,7 @@ export default function DetailInformation() {
                                     <div className={`${styles.headerInformationDiv} icon me-3`} >
                                         <i className="fa fa-phone-alt text-primary" />
                                     </div>
-                                    <span>Contact: +012 345 6789</span>
+                                    <span>Owner: {owner}</span>
                                 </div>
                             </div>
                         </div>
@@ -43,7 +57,7 @@ export default function DetailInformation() {
                                     <div className={`${styles.headerInformationElements} icon me-3`}>
                                         <img src="src/assets/img/icon-deal.png" alt="" />
                                     </div>
-                                    <span>Price: 100,000$</span>
+                                    <span>Price: {price} $</span>
                                 </div>
                             </div>
                         </div>
@@ -53,7 +67,17 @@ export default function DetailInformation() {
                         <div className="position-relative overflow-hidden p-5 pe-0">
                             <Carousel >
                                 <Carousel.Item>
-                                    <img className={styles.imgCarousel} src="src/assets/img/carousel-1.jpg" alt="" />
+                                    <img className={styles.imgCarousel} src={mainPhoto} alt="" />
+                                    <Carousel.Caption>
+                                    </Carousel.Caption>
+                                </Carousel.Item>
+                                <Carousel.Item>
+                                    <img className={styles.imgCarousel} src={secondPhoto} alt="" />
+                                    <Carousel.Caption>
+                                    </Carousel.Caption>
+                                </Carousel.Item>
+                                <Carousel.Item>
+                                    <img className={styles.imgCarousel} src={thirdPhoto} alt="" />
                                     <Carousel.Caption>
                                     </Carousel.Caption>
                                 </Carousel.Item>
@@ -61,20 +85,24 @@ export default function DetailInformation() {
                         </div>
                     </div>
                     <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s" >
-                        <p className="mb-4">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium aspernatur quos quia doloremque suscipit aliquid excepturi asperiores quibusdam! Quo magnam deleniti earum cumque inventore rem debitis dolorum molestiae quaerat numquam sequi dicta nesciunt nemo vero ducimus autem, dolores praesentium nam fugit aspernatur? Quibusdam non, fugit sed quidem eum architecto sunt a nemo iusto consequatur distinctio odit dolorem optio sapiente culpa. Hic ad, aut, eaque dignissimos perspiciatis deserunt mollitia vitae explicabo consequuntur animi incidunt et! Amet aspernatur culpa similique veritatis soluta delectus sint labore quis, porro ratione expedita dolor nobis accusantium rem tempora suscipit provident quam impedit praesentium iste aliquid esse!
+                        <p className="mb-4" style={{paddingTop:"70px"}}>
+                            {description}
                         </p>
                         <p>
                             <i className="fa fa-check text-primary me-3" />
-                            Tempor erat elitr rebum at clita
+                            Type: {types}
                         </p>
                         <p>
                             <i className="fa fa-check text-primary me-3" />
-                            Aliqu diam amet diam et eos
+                            Square Meters: {meters}
                         </p>
                         <p>
                             <i className="fa fa-check text-primary me-3" />
-                            Clita duo justo magna dolore erat amet
+                            Rooms: {rooms}
+                        </p>
+                        <p>
+                            <i className="fa fa-check text-primary me-3" />
+                            Baths: {baths}
                         </p>
                         <a className="btn btn-primary py-3 px-5 mt-3" href="">
                             EDIT

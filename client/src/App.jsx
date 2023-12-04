@@ -22,7 +22,7 @@ export default function App() {
                     <Route path='/register' element={<Register />} />
                     <Route path='/login' element={<Login />} />
                     <Route path='/create-estate' element={<CreateEstate />} />
-                    <Route path='/details' element={<Details />} />
+                    <Route path='/:estateId-details' element={<Details />} />
                 </Routes>
             </AuthProvider>
             {/* <Spinenr/> */}
