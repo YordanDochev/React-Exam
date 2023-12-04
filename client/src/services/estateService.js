@@ -20,6 +20,12 @@ export const create = async (estateData) => {
     return result
 }
 
+export const edit = async (estateId,estateData) => {
+    const result = await request.edit(`${baseUrl}/${estateId}`,estateData)
+
+    return result
+}
+
 export const getLatesVillas = async () =>{
 
     const result = await request.get(`${baseUrl}?where=types Like "Villa"&sortBy=_createdOn decs&offset=0&pageSize=3`)

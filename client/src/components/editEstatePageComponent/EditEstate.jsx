@@ -1,32 +1,26 @@
 import { useNavigate } from 'react-router-dom'
 
-import style from './CreateEstate.module.css'
+import style from './EditEstate.module.css'
 import * as estateService from "../../services/estateService"
 
 import FormEstate from './Form'
-import HeaderCreate from './HeaderCreate'
-import { useContext } from 'react'
-import AuthContext from '../../contexts/authContext'
+import  HeaderEdit from './HeaderEdit'
 
-
-export default function CreateEstate() {
-    const navigate = useNavigate();
-    const {firstName,lastName} = useContext(AuthContext)
-    const createSubmitHandler = async (values) => {
-        try {
+export default function EditEstate() {
+    // const navigate = useNavigate();
+    // const createSubmitHandler = async (values) => {
+    //     try {
            
-            values.owner = `${firstName} ${lastName}`
-            await estateService.create(values)
+    //         await estateService.create(values)
 
-            navigate('/catalog')
-        } catch (error) {
-            console.log(error);
-        }
-    }
-
+    //         navigate('/catalog')
+    //     } catch (error) {
+    //         console.log(error);
+    //     }
+    // }
     return (
         <div className="container-fluid header bg-white p-0">
-            <HeaderCreate />
+            <HeaderEdit />
             <div className="container-xxl py-5">
                 <div className="container">
                     <div
@@ -36,9 +30,9 @@ export default function CreateEstate() {
                     >
                         <h1 className="mb-3">Estate Parameters</h1>
                     </div>
-                    <div className={`col-md-6 ${style.createForm}`}>
+                    <div className={`col-md-6 ${style.editForm}`}>
                         <div className="wow fadeInUp" data-wow-delay="0.5s" >
-                            <FormEstate createSubmitHandler={createSubmitHandler} />
+                            <FormEstate  />
                         </div>
 
                     </div>

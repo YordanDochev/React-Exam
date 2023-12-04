@@ -1,9 +1,13 @@
+import { useEffect,useState } from 'react';
+
+import * as estateService from '../../services/estateService'
+
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
+import { useNavigate, useParams } from 'react-router-dom';
 
-import useForm from '../../hooks/useForm';
 
 const initialValues = {
 
@@ -22,10 +26,33 @@ const initialValues = {
 }
 
 export default function FormEstate({
-    createSubmitHandler
 }) {
+    const {estateId} = useParams();
+    const navigate = useNavigate();
+    const [values, setValues] = useState(initialValues)
 
-    const { values, onChangeHandler, onSubmit } = useForm(initialValues, createSubmitHandler)
+    useEffect(()=>{
+        estateService.getOne(estateId)
+            .then(result => setValues(result))
+            .catch(err=>console.log(err))
+    },[estateId])
+
+    const onSubmit = async (e) => {
+        e.preventDefault();
+        try {
+            const result = await estateService.edit(estateId,values)
+            navigate('/')
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    const onChangeHandler = (e) => {
+        setValues((state) => ({
+            ...state,
+            [e.target.name]: e.target.value,
+          }));
+    }    
 
     return (
         <Form onSubmit={onSubmit}>

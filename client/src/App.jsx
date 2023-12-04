@@ -10,6 +10,7 @@ import Register from "./components/RegisterPageComponent/Register"
 import Login from "./components/loginPageComponent/Loing"
 import Spinenr from "./components/spinnerComponent/Spinner";
 import { AuthProvider } from './contexts/authContext';
+import EditEstate from './components/editEstatePageComponent/EditEstate';
 
 export default function App() {
     return (
@@ -23,6 +24,7 @@ export default function App() {
                     <Route path='/login' element={<Login />} />
                     <Route path='/create-estate' element={<CreateEstate />} />
                     <Route path='/:estateId-details' element={<Details />} />
+                    <Route path='/:estateId-edit' element={<EditEstate />} />
                 </Routes>
             </AuthProvider>
             {/* <Spinenr/> */}

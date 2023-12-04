@@ -1448,6 +1448,8 @@
   var seedData = {
     estates: {
       "cc9b0a0f-655d-45d7-9857-0a61c6bb2c4d": {
+        _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+        owner: 'Yordan Dochev',
         _id: "cc9b0a0f-655d-45d7-9857-0a61c6bb2c4d",
         title: "Las Vegas Sotheby's International",
         price: "2,102,600",
@@ -1469,6 +1471,8 @@
         _updatedOn: 1616236792930,
       },
       "ff9b0a0f-65sd-45d7-9857-0a60a6gc2cm4": {
+        _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+        owner: 'Yordan Dochev',
         _id: "ff9b0a0f-65sd-45d7-9857-0a60a6gc2cm4",
         title:
           "Modern Art-Filled Villa near Club 55 ",
@@ -1491,6 +1495,8 @@
         _updatedOn: 1616236792930,
       },
       "ff9b0a0f-65sd-45d7-9957-0a60a6gc2cm4": {
+        _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+        owner: 'Yordan Dochev',
         _id: "ff9b0a0f-65sd-45d7-9957-0a60a6gc2cm4",
         title:
           "Villa Gaïa",
@@ -1513,6 +1519,8 @@
         _updatedOn: 1616236792930,
       },
       "ff9b0a0f-65sd-45d7-9817-0a60a6gc2cm4": {
+        _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+        owner: 'Yordan Dochev',
         _id: "ff9b0a0f-65sd-45d7-9817-0a60a6gc2cm4",
         title:
           "Luxury Apartment with 4 rooms, Barcelona",
@@ -1535,6 +1543,8 @@
         _updatedOn: 1616236792930,
       },
       "ac9b0a0f-00ab-45d7-9817-0a60asa91asd": {
+        _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+        owner: 'Yordan Dochev',
         _id: "ac9b0a0f-00ab-45d7-9817-0a60asa91asd",
         title:
           "Apartment with 3 rooms in center of Berlin",
@@ -1557,6 +1567,8 @@
         _updatedOn: 1616236792930,
       },
       "nvasd20f-19am-48a7-as01-as1has61233d": {
+        _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+        owner: 'Yordan Dochev',
         _id: "nvasd20f-19am-48a7-as01-as1has61233d",
         title:
           "Dream Apartment in the Heart of Istanbul",
@@ -1579,6 +1591,8 @@
         _updatedOn: 1616236792930,
       },
       "ff9b0a0f-65sd-45d7-9817-0a60a6gsc2cm4": {
+        _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+        owner: 'Yordan Dochev',
         _id: "ff9b0a0f-65sd-45d7-9817-0a60a6gsc2cm4",
         title:
           "Modern Office in New York",
@@ -1601,6 +1615,8 @@
         _updatedOn: 1616236792930,
       },
       "sad13s13-sdas-1235-5123-sadt14f1321f1": {
+        _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+        owner: 'Yordan Dochev',
         _id: "sad13s13-sdas-1235-5123-sadt14f1321f1",
         title:
           "Prime Office Spaces in the Heart of Austin",
@@ -1623,6 +1639,8 @@
         _updatedOn: 1616236792930,
       },
       "addaas12-1912-asde-51c1-gjt243f13fh1t": {
+        _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+        owner: 'Yordan Dochev',
         _id: "addaas12-1912-asde-51c1-gjt243f13fh1t",
         title:
           "Premier Garages in Vienna for Your Automotive Bliss",

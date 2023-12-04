@@ -10,7 +10,6 @@ import HeaderDetails from "./HeaderDetails";
 export default function Details() {
     const {estateId} = useParams(); 
     const [estate,setEstate] = useState({})
-    console.log(estateId);
     useEffect(()=>{
         estateService.getOne(estateId)
             .then(setEstate)

@@ -1,9 +1,12 @@
+import { Link } from 'react-router-dom';
+
 import styles from './Details.module.css'
 
 import Carousel from 'react-bootstrap/Carousel';
 import Button from 'react-bootstrap/Button';
 
 export default function DetailInformation({
+    _id,
     title,
     price,
     mainPhoto,
@@ -85,7 +88,7 @@ export default function DetailInformation({
                         </div>
                     </div>
                     <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s" >
-                        <p className="mb-4" style={{paddingTop:"70px"}}>
+                        <p className="mb-4" style={{ paddingTop: "70px" }}>
                             {description}
                         </p>
                         <p>
@@ -104,9 +107,13 @@ export default function DetailInformation({
                             <i className="fa fa-check text-primary me-3" />
                             Baths: {baths}
                         </p>
-                        <a className="btn btn-primary py-3 px-5 mt-3" href="">
+                        <Link
+                            className="btn btn-primary py-3 px-5 mt-3"
+                            to={`/${_id}-edit`}
+                            
+                        >
                             EDIT
-                        </a>
+                        </Link>
                         <Button className={styles.buttonDelete} variant="danger">DELETE</Button>
                     </div>
                 </div>
