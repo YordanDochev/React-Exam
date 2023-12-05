@@ -4,9 +4,12 @@ import styles from './Details.module.css'
 
 import Carousel from 'react-bootstrap/Carousel';
 import Button from 'react-bootstrap/Button';
+import { useContext } from 'react';
+import AuthContext from '../../contexts/AuthContext';
 
 export default function DetailInformation({
     _id,
+    _ownerId,
     title,
     price,
     mainPhoto,
@@ -19,8 +22,11 @@ export default function DetailInformation({
     rooms,
     baths,
     location,
-    owner
+    owner,
+    onDeleteClickHandler,
 }) {
+    const { userId } = useContext(AuthContext)
+
     return (
         <div className="container-xxl py-5">
             <div className="container">
@@ -107,14 +113,13 @@ export default function DetailInformation({
                             <i className="fa fa-check text-primary me-3" />
                             Baths: {baths}
                         </p>
-                        <Link
-                            className="btn btn-primary py-3 px-5 mt-3"
-                            to={`/${_id}-edit`}
-                            
-                        >
-                            EDIT
-                        </Link>
-                        <Button className={styles.buttonDelete} variant="danger">DELETE</Button>
+                        {_ownerId === userId && (
+                            <>
+                                <Link className="btn btn-primary py-3 px-5 mt-3" to={`/${_id}-edit`}>EDIT</Link>
+                                <Button className={styles.buttonDelete} onClick={() => onDeleteClickHandler(_id)} variant="danger">DELETE</Button>
+                            </>
+                        )}
+
                     </div>
                 </div>
             </div>

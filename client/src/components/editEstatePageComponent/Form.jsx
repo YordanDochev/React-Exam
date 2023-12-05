@@ -40,8 +40,8 @@ export default function FormEstate({
     const onSubmit = async (e) => {
         e.preventDefault();
         try {
-            const result = await estateService.edit(estateId,values)
-            navigate('/')
+            await estateService.edit(estateId,values)
+            navigate(`/${estateId}-details`)
         } catch (error) {
             console.log(error);
         }

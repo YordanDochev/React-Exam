@@ -26,6 +26,8 @@ export const edit = async (estateId,estateData) => {
     return result
 }
 
+export const remove = async(estateId) => await request.remove(`${baseUrl}/${estateId}`)
+
 export const getLatesVillas = async () =>{
 
     const result = await request.get(`${baseUrl}?where=types Like "Villa"&sortBy=_createdOn decs&offset=0&pageSize=3`)
