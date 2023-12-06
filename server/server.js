@@ -1452,7 +1452,7 @@
         owner: 'Yordan Dochev',
         _id: "cc9b0a0f-655d-45d7-9857-0a61c6bb2c4d",
         title: "Las Vegas Sotheby's International",
-        price: "2,102,600",
+        price: 2102600,
         mainPhoto:
           "https://pic.le-cdn.com/thumbs/1024x768/08/1/properties/Property-85879383632a606b8a1455714a2d27e7-129252850.jpg",
         secondPhoto:
@@ -1463,9 +1463,9 @@
         description:
           "Experience luxury living at 4135 Villa Rafael, nestled within the guard-gated Southern Highlands community. This 5-bed, 4.5-bath, 5,838 sq ft mansion boasts opulence at every turn, featuring a captivating stone exterior, a glass-enclosed wine storage room, and a sprawling rear pool. Step in through the private courtyard to discover an attached casita, a grand chandelier, and a curved staircase in the entryway. The chef's kitchen delights with a spacious fridge, double oven, and an inviting island for quick dining. The primary bedroom wows with a sitting area, balcony, and an extravagant shower/bathtub setup. Even the closets exude luxury. Outdoors, enjoy well-designed courtyards, a barbecue, fireplace, and a pool/spa combo with a basketball hoop. The expansive downstairs living area seamlessly opens to the pool, maximizing entertainment possibilities.",
         types: "Villa",
-        meters: "542 ",
-        rooms: "5",
-        baths: "5",
+        meters: 542,
+        rooms: 5,
+        baths: 5,
         location: "Las Vegas",
         _createdOn: 1612236790262,
         _updatedOn: 1616236792930,
@@ -1476,7 +1476,7 @@
         _id: "ff9b0a0f-65sd-45d7-9857-0a60a6gc2cm4",
         title:
           "Modern Art-Filled Villa near Club 55 ",
-        price: "6,112,000",
+        price: 6112000,
         mainPhoto:
           "https://ml5vpmchq2rr.i.optimole.com/w:1920/h:1080/q:mauto/https://iconprivatecollection.com/wp-content/uploads/2022/11/Villa-Ama-St-Tropez-20.jpeg",
         secondPhoto:
@@ -1487,9 +1487,9 @@
         description:
           "This villa is appreciated for its large interior spaces of 500 sqm and 10,000 sqm garden offering an exceptional panoramic sea view. This villa has the most pleasant outdoor spaces. A large park including sculptures and Art creations by Richard Serra, Jeff Koons, Urs Fisher or even Frantz West as well as terraces with a large table and a bar for the delight of your summer evenings.This modern villa accommodates up to 14 guests, with 7 en-suite bedrooms including a children’s bedroom for 3 with bunk bed, an open living room with direct access to the swimming pool, a kitchen and an apartment with 2 double bedrooms. There are also 3 bedrooms for your staff and a second kitchen for the chef.",
         types: "Villa",
-        meters: "500 ",
-        rooms: "7",
-        baths: "6",
+        meters: 500,
+        rooms: 7,
+        baths: 6,
         location: "Tropez, France",
         _createdOn: 1616236790260,
         _updatedOn: 1616236792930,
@@ -1500,7 +1500,7 @@
         _id: "ff9b0a0f-65sd-45d7-9957-0a60a6gc2cm4",
         title:
           "Villa Gaïa",
-        price: "10,000,000",
+        price: 10000000,
         mainPhoto:
           "https://www.amaviacollection.com/wp-content/uploads/2022/06/Amavia_Collection_Villa_Gaia_1.jpg",
         secondPhoto:
@@ -1511,9 +1511,9 @@
         description:
           "Villa Gaïa is a stunning contemporary-design villa with outstanding views stretching dozens of miles from Beaulieu and Saint-Jean-Cap-Ferrat to Cannes and the Massif de l’Esterel. It offers a wide range of amenities: Spa with indoor pool crafted in natural stone, sauna, fully equipped gym (featuring a Technogym personal line), fully equipped cinema, outdoor heated pool with pool house and outdoor kitchen, 6 en-suite bedrooms with private balconies and a secured garage. The house can host 10 to 12 people, with 6 bedrooms, 8 bathrooms over 445 sqm (approximately 5,000 sq.ft).",
         types: "Villa",
-        meters: "445 ",
-        rooms: "8",
-        baths: "5",
+        meters: 445,
+        rooms: 8,
+        baths: 5,
         location: "Marseille, France",
         _createdOn: 1616236760260,
         _updatedOn: 1616236792930,
@@ -1524,7 +1524,7 @@
         _id: "ff9b0a0f-65sd-45d7-9817-0a60a6gc2cm4",
         title:
           "Luxury Apartment with 4 rooms, Barcelona",
-        price: "512,000",
+        price: 512000,
         mainPhoto:
           "https://images.pexels.com/photos/323705/pexels-photo-323705.jpeg?auto=compress&cs=tinysrgb&w=1600",
         secondPhoto:
@@ -1535,9 +1535,9 @@
         description:
           "Experience the epitome of urban living in this 4-bedroom, 2-bathroom apartment nestled in the heart of Barcelona. This centrally located gem combines modern comfort with the vibrant energy of the city. The sleek kitchen opens into a spacious living area, while the bedrooms offer a tranquil retreat. Enjoy the convenience of two well-appointed bathrooms, making this residence an ideal home for those seeking the perfect balance of cosmopolitan living and relaxation.",
         types: "Apartment",
-        meters: "300 ",
-        rooms: "4",
-        baths: "2",
+        meters: 300,
+        rooms: 4,
+        baths: 2,
         location: "Barcelona, Spain",
         _createdOn: 1616230790262,
         _updatedOn: 1616236792930,
@@ -1548,7 +1548,7 @@
         _id: "ac9b0a0f-00ab-45d7-9817-0a60asa91asd",
         title:
           "Apartment with 3 rooms in center of Berlin",
-        price: "312,000",
+        price: 312000,
         mainPhoto:
           "https://images.unsplash.com/photo-1612637968894-660373e23b03?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YXBhcnRtZW50JTIwYnVpbGRpbmd8ZW58MHx8MHx8fDA%3D",
         secondPhoto:
@@ -1559,9 +1559,9 @@
         description:
           "Indulge in sophisticated living in this 3-bedroom, 2-bathroom apartment situated within a private complex in Berlin. The contemporary design of the interior is complemented by a spacious kitchen and a cozy living area. Relax in the comfort of three bedrooms and enjoy the convenience of two well-appointed baths. Nestled in a private complex, this residence offers an exclusive retreat in the heart of Berlin.",
         types: "Apartment",
-        meters: "280 ",
-        rooms: "3",
-        baths: "2",
+        meters: 280,
+        rooms: 3,
+        baths: 2,
         location: "Berlin, German",
         _createdOn: 1616230790262,
         _updatedOn: 1616236792930,
@@ -1572,7 +1572,7 @@
         _id: "nvasd20f-19am-48a7-as01-as1has61233d",
         title:
           "Dream Apartment in the Heart of Istanbul",
-        price: "550,000",
+        price: 550000,
         mainPhoto:
           "https://images.unsplash.com/photo-1597047084993-bf337e09ede0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjR8fGFwYXJ0bWVudCUyMGJ1aWxkaW5nfGVufDB8fDB8fHww",
         secondPhoto:
@@ -1583,9 +1583,9 @@
         description:
           "Embrace luxurious living in the heart of Istanbul with this exquisite 3-bedroom, 2-bathroom apartment nestled within a private complex. Elegance meets functionality as the contemporary design seamlessly integrates a spacious kitchen and inviting living spaces. Enjoy the exclusivity and security of a private complex while relishing the comfort of well-appointed bedrooms and modern baths. Experience the epitome of cosmopolitan living in this sophisticated Istanbul residence.",
         types: "Apartment",
-        meters: "280 ",
-        rooms: "5",
-        baths: "3",
+        meters: 280,
+        rooms: 5,
+        baths: 3,
         location: "Istanbul, Turkey",
         _createdOn: 1616230790262,
         _updatedOn: 1616236792930,
@@ -1596,7 +1596,7 @@
         _id: "ff9b0a0f-65sd-45d7-9817-0a60a6gsc2cm4",
         title:
           "Modern Office in New York",
-        price: "800,000",
+        price: 800000,
         mainPhoto:
           "https://img.freepik.com/free-photo/modern-business-building-scenery-touching-sky_181624-6591.jpg?size=626&ext=jpg&ga=GA1.1.791863226.1701523582&semt=sph",
         secondPhoto:
@@ -1607,9 +1607,9 @@
         description:
           "Elevate your corporate presence with this prestigious office space on Park Avenue, New York. Spanning 8 rooms and 6 baths, this expansive workplace is designed for efficiency and sophistication. Ideal for accommodating up to 100 people, it combines modern amenities, luxurious interiors, and a prime location, offering a distinguished environment for your business to thrive in the heart of Manhattan's business district..",
         types: "Office",
-        meters: "650 ",
-        rooms: "8",
-        baths: "6",
+        meters: 650,
+        rooms: 8,
+        baths: 6,
         location: "New York, USA",
         _createdOn: 1613231320262,
         _updatedOn: 1616236792930,
@@ -1620,7 +1620,7 @@
         _id: "sad13s13-sdas-1235-5123-sadt14f1321f1",
         title:
           "Prime Office Spaces in the Heart of Austin",
-        price: "650,000",
+        price: 650000,
         mainPhoto:
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2JhAedxSqOZHgxUZqlXn1XsBMcaBUU4X6PwoD3tkV2Gvy395RnvHBiAhScFg&sh",
         secondPhoto:
@@ -1631,9 +1631,9 @@
         description:
           "Discover a dynamic work environment on Austin's vibrant Congress Avenue. This spacious office comprises 7 rooms and 5 baths, catering to the needs of up to 80 people. With a contemporary design, state-of-the-art facilities, and a prime location, this workspace fosters productivity and collaboration. Seize the opportunity to establish your business in the heart of Austin's thriving business community.",
         types: "Office",
-        meters: "500 ",
-        rooms: "7",
-        baths: "5",
+        meters: 500,
+        rooms: 7,
+        baths: 5,
         location: "Austin, Texas",
         _createdOn: 1613231320262,
         _updatedOn: 1616236792930,
@@ -1644,7 +1644,7 @@
         _id: "addaas12-1912-asde-51c1-gjt243f13fh1t",
         title:
           "Premier Garages in Vienna for Your Automotive Bliss",
-        price: "50,000",
+        price: 50000,
         mainPhoto:
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTv-LG6nJgcm_y-dPV-BvMFlg1m6K8NwO83sZKaZhIAAHjVHf3fLA2RCFPKlw&s",
         secondPhoto:
@@ -1655,9 +1655,9 @@
         description:
           "Secure your vehicles with style in this exclusive garage located in Vienna's Landstraße district. Accommodating up to two cars, this space offers both functionality and elegance. With a private room and bath, it provides convenience and privacy for your automotive needs. Enjoy the luxury of a centrally located garage, combining sophistication and practicality in the heart of Vienna.",
         types: "Garage",
-        meters: "100 ",
-        rooms: "1",
-        baths: "1",
+        meters: 100,
+        rooms: 1,
+        baths: 1,
         location: "Vinna, Austria",
         _createdOn: 1613231313362,
         _updatedOn: 1616236792930,

@@ -3,7 +3,7 @@ import * as request from '../lib/request'
 const baseUrl = 'http://localhost:3030/data/estates'
 
 export const getAll = async () => {
-    const estates = await request.get(baseUrl)
+    const estates = await request.get(`${baseUrl}?sortBy=_createdOn decs`)
 
     return estates
 }
@@ -78,4 +78,10 @@ export const getCountGarages = async () => {
     const count = await request.get(`${baseUrl}?where=types Like "Garage"&count`)
 
     return count;
+}
+
+export const search = async (type,location,minPrice,maxPrice) => {
+    const estates = await request.get(`${baseUrl}?where=price > ${minPrice} AND price < ${maxPrice} AND types LIKE "${type}" AND location LIKE "${location}"`)
+
+    return estates
 }

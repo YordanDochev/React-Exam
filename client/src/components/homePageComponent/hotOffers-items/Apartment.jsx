@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 
+import formatNumberWithCommas from "../../../utils/formatNumberWithCommas";
 
 export default function Apartemnt({
     apartment
@@ -14,14 +15,14 @@ export default function Apartemnt({
                     <div className="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">{apartment.types}</div>
                 </div>
                 <div className="p-4 pb-0">
-                    <h5 className="text-primary mb-3">${apartment.price}</h5>
+                    <h5 className="text-primary mb-3">$ {formatNumberWithCommas(apartment.price)}</h5>
                     <a className="d-block h5 mb-2" href="">{apartment.title}</a>
                     <p><i className="fa fa-map-marker-alt text-primary me-2"></i>{apartment.address}, {apartment.location}</p>
                 </div>
                 <div className="d-flex border-top">
-                    <small className="flex-fill text-center border-end py-2"><i className="fa fa-ruler-combined text-primary me-2"></i>{apartment.meters} Sqft</small>
-                    <small className="flex-fill text-center border-end py-2"><i className="fa fa-bed text-primary me-2"></i>{apartment.rooms} Rooms</small>
-                    <small className="flex-fill text-center py-2"><i className="fa fa-bath text-primary me-2"></i>{apartment.baths} Baths</small>
+                    <small className="flex-fill text-center border-end py-2"><i className="fa fa-ruler-combined text-primary me-2"></i>{formatNumberWithCommas(apartment.meters)} Sqft</small>
+                    <small className="flex-fill text-center border-end py-2"><i className="fa fa-bed text-primary me-2"></i>{formatNumberWithCommas(apartment.rooms)} Rooms</small>
+                    <small className="flex-fill text-center py-2"><i className="fa fa-bath text-primary me-2"></i>{formatNumberWithCommas(apartment.baths)} Baths</small>
                 </div>
             </div>
         </div>

@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 
 import styles from './Details.module.css'
+import formatNumberWithCommas from "../../utils/formatNumberWithCommas";
 
 import Carousel from 'react-bootstrap/Carousel';
 import Button from 'react-bootstrap/Button';
@@ -66,7 +67,7 @@ export default function DetailInformation({
                                     <div className={`${styles.headerInformationElements} icon me-3`}>
                                         <img src="src/assets/img/icon-deal.png" alt="" />
                                     </div>
-                                    <span>Price: {price} $</span>
+                                    <span>Price: {formatNumberWithCommas(price)} $</span>
                                 </div>
                             </div>
                         </div>

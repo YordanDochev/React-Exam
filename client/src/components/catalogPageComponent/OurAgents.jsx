@@ -19,8 +19,8 @@ export default function OurAgents() {
                                 </div>
                             </div>
                             <div className="text-center p-4 mt-3">
-                                <h5 className="fw-bold mb-0">Full Name</h5>
-                                <small>Designation</small>
+                                <h5 className="fw-bold mb-0">Elena Rodriguez</h5>
+                                <small>Contact: +44 20 7946 0958</small>
                             </div>
                         </div>
                     </div>
@@ -35,8 +35,8 @@ export default function OurAgents() {
                                 </div>
                             </div>
                             <div className="text-center p-4 mt-3">
-                                <h5 className="fw-bold mb-0">Full Name</h5>
-                                <small>Designation</small>
+                                <h5 className="fw-bold mb-0">John Smith</h5>
+                                <small>Contact: +1 (555) 123-4567</small>
                             </div>
                         </div>
                     </div>
@@ -51,8 +51,8 @@ export default function OurAgents() {
                                 </div>
                             </div>
                             <div className="text-center p-4 mt-3">
-                                <h5 className="fw-bold mb-0">Full Name</h5>
-                                <small>Designation</small>
+                                <h5 className="fw-bold mb-0">Aisha Patel</h5>
+                                <small>Contact: +81 3 1234 5678</small>
                             </div>
                         </div>
                     </div>
@@ -67,8 +67,8 @@ export default function OurAgents() {
                                 </div>
                             </div>
                             <div className="text-center p-4 mt-3">
-                                <h5 className="fw-bold mb-0">Full Name</h5>
-                                <small>Designation</small>
+                                <h5 className="fw-bold mb-0">Marcus Johnson</h5>
+                                <small>+61 2 9876 5432</small>
                             </div>
                         </div>
                     </div>

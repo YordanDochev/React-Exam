@@ -58,17 +58,17 @@ export default function FormEstate({
             <Row className="mb-3">
                 <Form.Group as={Col} >
                     <Form.Label>Metters</Form.Label>
-                    <Form.Control name="meters" placeholder="m²" onChange={onChangeHandler} value={values.meters} />
+                    <Form.Control type="number" name="meters" placeholder="m²" onChange={onChangeHandler} value={values.meters} />
                 </Form.Group>
 
                 <Form.Group as={Col} >
                     <Form.Label>Room</Form.Label>
-                    <Form.Control name="rooms" placeholder="Number" onChange={onChangeHandler} value={values.rooms} />
+                    <Form.Control type="number" name="rooms" placeholder="Number" onChange={onChangeHandler} value={values.rooms} />
                 </Form.Group>
 
                 <Form.Group as={Col} >
                     <Form.Label>Bath</Form.Label>
-                    <Form.Control name="baths" placeholder="Number" onChange={onChangeHandler} value={values.baths} />
+                    <Form.Control type="number" name="baths" placeholder="Number" onChange={onChangeHandler} value={values.baths} />
                 </Form.Group>
 
 
@@ -102,7 +102,7 @@ export default function FormEstate({
                 </Form.Group>
                 <Form.Group as={Col}>
                     <Form.Label>Price</Form.Label>
-                    <Form.Control name="price" placeholder='$ 100,000' onChange={onChangeHandler} value={values.price} />
+                    <Form.Control type="number" name="price" placeholder='$ 100,000' onChange={onChangeHandler} value={values.price} />
                 </Form.Group>
             </Row>
             <Row>

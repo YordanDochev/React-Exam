@@ -11,6 +11,7 @@ import Login from "./components/loginPageComponent/Loing"
 import Spinenr from "./components/spinnerComponent/Spinner";
 import { AuthProvider } from './contexts/authContext';
 import EditEstate from './components/editEstatePageComponent/EditEstate';
+import Search from './components/serachPageComponent/Search';
 
 export default function App() {
     return (
@@ -20,6 +21,7 @@ export default function App() {
                 <Routes>
                     <Route path='/' element={<Home />} />
                     <Route path='/catalog' element={<Catalog />} />
+                    <Route path='/search' element={<Search />} />
                     <Route path='/register' element={<Register />} />
                     <Route path='/login' element={<Login />} />
                     <Route path='/create-estate' element={<CreateEstate />} />

@@ -14,7 +14,6 @@ export default function CreateEstate() {
     const {firstName,lastName} = useContext(AuthContext)
     const createSubmitHandler = async (values) => {
         try {
-           
             values.owner = `${firstName} ${lastName}`
             await estateService.create(values)
 

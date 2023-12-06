@@ -23,6 +23,7 @@ export default function Navigation() {
                     <div className="navbar-nav ms-auto">
                         <Link to="/" className="nav-item nav-link">Home</Link>
                         <Link to="/catalog" className="nav-item nav-link">Catalog</Link>
+                        <Link to="/search" className="nav-item nav-link">Search</Link>
                         {isAuthenticated && (
                             <Link to="/create-estate" className="nav-item nav-link">Create Estate</Link>
                         )}
