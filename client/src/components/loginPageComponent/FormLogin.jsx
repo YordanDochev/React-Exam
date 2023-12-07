@@ -1,6 +1,6 @@
 import styles from './Login.module.css'
 import useForm from '../../hooks/useForm'
-import { useContext } from 'react'
+import { useContext, useState } from 'react'
 import AuthContext from '../../contexts/authContext'
 
 const initialValues = {
@@ -10,10 +10,45 @@ const initialValues = {
 
 export default function FormLogin() {
 
-    const {loginSubmitHandler} = useContext(AuthContext)
+    const { loginSubmitHandler, status, statusToggler } = useContext(AuthContext)
 
     const { values, onChangeHandler, onSubmit } = useForm(initialValues, loginSubmitHandler)
+    const [errors, setErros] = useState({})
+    const emailValidatorHandler = () => {
+        const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.email)
 
+        if (!isValidEmail || values.email === "") {
+            setErros(state => ({
+                ...state,
+                email: 'Please insert a valid email'
+            }))
+        } else {
+            if (errors.email) {
+                setErros(state => ({
+                    ...state,
+                    email: ''
+                }))
+            }
+        }
+    }
+
+    const passwordValidatorHandler = () => {
+
+        if (values.password === "") {
+            setErros(state => ({
+                ...state,
+                password: 'Please insert password'
+            }))
+        } else {
+            if (errors.password) {
+                setErros(state => ({
+                    ...state,
+                    password: ''
+                }))
+            }
+        }
+
+    }
 
     return (
         <form onSubmit={onSubmit}>
@@ -29,8 +64,12 @@ export default function FormLogin() {
                             placeholder="Email"
                             value={values.email}
                             onChange={onChangeHandler}
+                            onBlur={emailValidatorHandler}
                         />
                         <label className={styles.label} htmlFor="email">Email</label>
+                        {errors.email && (
+                            <p className={styles.errorMessage}>{errors.email}</p>
+                        )}
                     </div>
                 </div>
                 <div className="col-12">
@@ -43,16 +82,30 @@ export default function FormLogin() {
                             placeholder="Password"
                             value={values.password}
                             onChange={onChangeHandler}
+                            onBlur={passwordValidatorHandler}
                         />
                         <label className={styles.label} htmlFor="subject">Password</label>
+                        {errors.password && (
+                            <p className={styles.errorMessage}>{errors.password}</p>
+                        )}
                     </div>
                 </div>
+
                 <div className="col-12">
-                    <button className={`btn btn-primary w-100 py-3 ${styles.loginButton}`} type="submit">
+
+                    <button
+                        className={`btn btn-primary w-100 py-3 ${styles.loginButton}`}
+                        disabled={Object.values(errors).some(er => er)}
+                        onClick={statusToggler}
+                        type="submit">
                         Login
                     </button>
                 </div>
+                {status !== "" && (
+                    <p className={styles.errorMessage}>The user does not exist , please insert the correct email and password!</p>
+                )}
                 <div className={styles.registerRedirect}>
+
                     <p>
                         If you don't have register <a className={styles.singUpLink} href="/register">Register</a>
                     </p>

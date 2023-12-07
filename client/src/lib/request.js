@@ -32,7 +32,13 @@ const request = async (method,url,data)=>{
         return {}
     }
 
+    if(response.status === 403){
+        throw response
+    }
+
     const result = response.json()
+
+    
 
     if(!response.ok){
         throw result

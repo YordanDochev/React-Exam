@@ -22,11 +22,10 @@ export default function useForm(initialValues, submitHandler) {
   };
 
   const onSubmit = (e) => {
+
     e.preventDefault();
 
     submitHandler(values);
-
-    setValues(initialValues)
   };
 
   return {

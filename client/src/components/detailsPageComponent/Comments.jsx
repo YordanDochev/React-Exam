@@ -120,50 +120,13 @@ const Comments = ({
                         </div>
                         <div className={`col-12 ${styles.divButtonComment}`} >
                             <button className="btn btn-primary w-100 py-3" type="submit" style={{ maxWidth: "500px" }}>
-                                Register
+                                Comment
                             </button>
                         </div>
                     </form>
                 </div>
             </div>)}
 
-            {/* {userId === _ownerId && (<div className="container">
-                <div
-                    className={`text-center mx-auto mb-5 wow fadeInUp ${styles.divComment}`}
-                    data-wow-delay="0.1s"
-
-                >
-                    <h1 className="mb-3">Your opinion matters to us</h1>
-                </div>
-                <div>
-                    <form onSubmit={onSubmit}>
-                        <div className="col-md-6">
-                            <div className="form-floating">
-                                <input
-                                    type="text"
-                                    className="form-control"
-                                    id="comment"
-                                    name="comment"
-                                    placeholder="Comment"
-                                    style={{ width: "900px", marginLeft: "215px" }}
-                                    value={values.comment}
-                                    onChange={onChangeHandler}
-                                />
-                                <label htmlFor="lastName" style={{ marginLeft: "215px" }}>Your thoughts</label>
-
-                            </div>
-
-                        </div>
-                        <div className={`col-12 ${styles.divButtonComment}`} >
-                            <button className="btn btn-primary w-100 py-3" type="submit" style={{ maxWidth: "500px" }}>
-                                Register
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-
-            )} */}
 
 
         </>

@@ -14,12 +14,17 @@ export const register = async ({email,firstName,lastName,password}) => {
 };
 
 export const login = async ({email,password}) => {
-    const response = await request.post(`${baseUrl}/login`,{
-        email,
-        password
-    });
-
-    return response;
+    try {
+        const response = await request.post(`${baseUrl}/login`,{
+            email,
+            password
+        });
+    
+        return response;
+    } catch (error) {
+        throw new Error ('The user does not exist')
+    }
+    
 };
 
 export const logout = async () => await request.get(`${baseUrl}/logout`)

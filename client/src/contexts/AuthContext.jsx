@@ -1,4 +1,4 @@
-import { createContext } from "react";
+import { createContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 
@@ -13,6 +13,14 @@ export const AuthProvider = ({
 
     const [auth, setAuth] = usePersistedStorage('Auth', {})
     const navigate = useNavigate();
+
+    const [status, setStatus] = useState("");
+
+    const statusToggler = () => {
+        if (status !== "") {
+            setStatus("");
+        }
+    };
 
     const registerSubmitHanler = async (values) => {
         try {
@@ -33,7 +41,9 @@ export const AuthProvider = ({
             setAuth(response)
             navigate('/')
         } catch (error) {
-            console.log(error);
+            setStatus(error.message);
+
+            console.log(error.message)
         }
     }
 
@@ -57,6 +67,8 @@ export const AuthProvider = ({
         lastName: auth.lastName,
         userId: auth._id,
         isAuthenticated: !!auth.accessToken,
+        status,
+        statusToggler,
     }
 
     return (
