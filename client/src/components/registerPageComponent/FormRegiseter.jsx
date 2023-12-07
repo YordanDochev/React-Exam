@@ -12,9 +12,10 @@ const initialValues = {
 }
 
 export default function FormRegister() {
-    const {registerSubmitHanler} = useContext(AuthContext);
+    const {registerSubmitHanler,errorFlag, statusToggler} = useContext(AuthContext);
     
     const { values, onChangeHandler, onSubmit } = useForm(initialValues, registerSubmitHanler)
+
 
     return (
         <form onSubmit={onSubmit}>
@@ -91,9 +92,12 @@ export default function FormRegister() {
                     </div>
                 </div>
                 <div className="col-12">
-                    <button className={`btn btn-primary w-100 py-3 ${styles.registerButton}`} type="submit">
+                    <button className={`btn btn-primary w-100 py-3 ${styles.registerButton}`} onClick={()=>{statusToggler}} type="submit">
                         Register
                     </button>
+                    {errorFlag !== "" && (
+                        <p className={styles.errorMessage}>The user does not exist , please insert the correct email and password!</p>
+                    )}
                 </div>
                 <div className={styles.loingRedirect}>
                     <p>

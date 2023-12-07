@@ -2,53 +2,69 @@ import styles from './Login.module.css'
 import useForm from '../../hooks/useForm'
 import { useContext, useState } from 'react'
 import AuthContext from '../../contexts/authContext'
+import useValidator from '../../hooks/useValidator'
 
 const initialValues = {
     email: '',
     password: ''
 }
 
+const LoginFormKyes = {
+    Email: 'email',
+    Password: 'password',
+};
+
+
+
 export default function FormLogin() {
 
-    const { loginSubmitHandler, status, statusToggler } = useContext(AuthContext)
+    const { loginSubmitHandler, errorFlag, statusToggler } = useContext(AuthContext)
 
-    const { values, onChangeHandler, onSubmit } = useForm(initialValues, loginSubmitHandler)
-    const [errors, setErros] = useState({})
-    const emailValidatorHandler = () => {
-        const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.email)
+    const { values, onChangeHandler, onSubmit } = useForm({
+        [LoginFormKyes.Email]: '',
+        [LoginFormKyes.Password]: '',
+    }, loginSubmitHandler)
 
-        if (!isValidEmail || values.email === "") {
-            setErros(state => ({
-                ...state,
-                email: 'Please insert a valid email'
-            }))
-        } else {
-            if (errors.email) {
-                setErros(state => ({
-                    ...state,
-                    email: ''
-                }))
-            }
-        }
-    }
+   
+    const { errors, validatorHandler } = useValidator()
 
-    const passwordValidatorHandler = () => {
+    
+    // const [errors, setErros] = useState({})
+    // const emailValidatorHandler = () => {
+    //     const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.email)
 
-        if (values.password === "") {
-            setErros(state => ({
-                ...state,
-                password: 'Please insert password'
-            }))
-        } else {
-            if (errors.password) {
-                setErros(state => ({
-                    ...state,
-                    password: ''
-                }))
-            }
-        }
+    //     if (!isValidEmail || values.email === "") {
+    //         setErros(state => ({
+    //             ...state,
+    //             email: 'Please insert a valid email'
+    //         }))
+    //     } else {
+    //         if (errors.email) {
+    //             setErros(state => ({
+    //                 ...state,
+    //                 email: ''
+    //             }))
+    //         }
+    //     }
+    // }
 
-    }
+    // const passwordValidatorHandler = () => {
+
+    //     if (values.password === "") {
+    //         setErros(state => ({
+    //             ...state,
+    //             password: 'Please insert password'
+    //         }))
+    //     } else {
+    //         if (errors.password) {
+    //             setErros(state => ({
+    //                 ...state,
+    //                 password: ''
+    //             }))
+    //         }
+    //     }
+
+    // }
 
     return (
         <form onSubmit={onSubmit}>
@@ -60,11 +76,11 @@ export default function FormLogin() {
                             type="text"
                             className={`form-control ${styles.input}`}
                             id="email"
-                            name="email"
+                            name={LoginFormKyes.Email}
                             placeholder="Email"
-                            value={values.email}
+                            value={values[LoginFormKyes.Email]}
                             onChange={onChangeHandler}
-                            onBlur={emailValidatorHandler}
+                            onBlur={()=>validatorHandler(LoginFormKyes.Email,values.email)}
                         />
                         <label className={styles.label} htmlFor="email">Email</label>
                         {errors.email && (
@@ -78,11 +94,11 @@ export default function FormLogin() {
                             type="password"
                             className={`form-control ${styles.input}`}
                             id="subject"
-                            name="password"
+                            name={LoginFormKyes.Password}
                             placeholder="Password"
-                            value={values.password}
+                            value={values[LoginFormKyes.Password]}
                             onChange={onChangeHandler}
-                            onBlur={passwordValidatorHandler}
+                            onBlur={()=>validatorHandler(LoginFormKyes.Password,values.password)}
                         />
                         <label className={styles.label} htmlFor="subject">Password</label>
                         {errors.password && (
@@ -101,7 +117,7 @@ export default function FormLogin() {
                         Login
                     </button>
                 </div>
-                {status !== "" && (
+                {errorFlag !== "" && (
                     <p className={styles.errorMessage}>The user does not exist , please insert the correct email and password!</p>
                 )}
                 <div className={styles.registerRedirect}>

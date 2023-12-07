@@ -31,7 +31,7 @@ export default function Navigation() {
                         )}
                     </div>
                     {isAuthenticated && (
-                        <button className="btn btn-primary px-3 d-none d-lg-flex" onClick={logoutSubmitHandler}>LOGUT</button>
+                        <button className="btn btn-primary px-3 d-none d-lg-flex" onClick={logoutSubmitHandler}>LOGOUT</button>
 
                     )}
 

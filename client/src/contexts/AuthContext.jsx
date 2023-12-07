@@ -14,11 +14,11 @@ export const AuthProvider = ({
     const [auth, setAuth] = usePersistedStorage('Auth', {})
     const navigate = useNavigate();
 
-    const [status, setStatus] = useState("");
+    const [errorFlag, setErrorFlag] = useState("");
 
     const statusToggler = () => {
-        if (status !== "") {
-            setStatus("");
+        if (errorFlag !== "") {
+            setErrorFlag("");
         }
     };
 
@@ -29,7 +29,8 @@ export const AuthProvider = ({
             setAuth(response)
             navigate('/')
         } catch (error) {
-            console.log(error);
+            setErrorFlag(error.message)
+            console.log(error.message);
         }
 
     }
@@ -41,7 +42,7 @@ export const AuthProvider = ({
             setAuth(response)
             navigate('/')
         } catch (error) {
-            setStatus(error.message);
+            setErrorFlag(error.message);
 
             console.log(error.message)
         }
@@ -67,7 +68,7 @@ export const AuthProvider = ({
         lastName: auth.lastName,
         userId: auth._id,
         isAuthenticated: !!auth.accessToken,
-        status,
+        errorFlag,
         statusToggler,
     }
 
