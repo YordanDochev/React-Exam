@@ -3,9 +3,9 @@ import { useNavigate, useParams } from 'react-router-dom';
 
 import * as estateService from '../../services/estateService'
 
-import ContactUs from "./ContactUs";
 import DetailInformation from "./DetailInformation";
 import HeaderDetails from "./HeaderDetails";
+import Comments from './Comments';
 
 export default function Details() {
     const {estateId} = useParams(); 
@@ -16,7 +16,7 @@ export default function Details() {
             .then(setEstate)
             .catch(err=> console.log(err))
     },[estateId])
-
+    
     const onDeleteClickHandler = async (estateId) => {
         try {
             await estateService.remove(estateId);
@@ -31,7 +31,7 @@ export default function Details() {
             
             <DetailInformation {...estate} onDeleteClickHandler={onDeleteClickHandler}/>
 
-            <ContactUs/>
+            <Comments {...estate}/>
         </>
     )
 }

@@ -40,3 +40,25 @@
 .contactUs {
     border: 1px dashed rgba(0, 185, 142, .3)
 }
+
+.divButtonComment{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 50px;
+}
+
+.userComentDiv{
+    width: 1000px;
+    margin-left: 140px
+}
+
+.divComment{
+    max-width: 600px
+}
+
+.imgUserComment {
+    height: 45px;
+    width: 45px;
+}

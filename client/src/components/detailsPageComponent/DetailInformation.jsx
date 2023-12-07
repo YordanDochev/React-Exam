@@ -27,7 +27,7 @@ export default function DetailInformation({
     onDeleteClickHandler,
 }) {
     const { userId } = useContext(AuthContext)
-
+    
     return (
         <div className="container-xxl py-5">
             <div className="container">
@@ -67,7 +67,7 @@ export default function DetailInformation({
                                     <div className={`${styles.headerInformationElements} icon me-3`}>
                                         <img src="src/assets/img/icon-deal.png" alt="" />
                                     </div>
-                                    <span>Price: {formatNumberWithCommas(price)} $</span>
+                                    <span>Price: {price} $</span>
                                 </div>
                             </div>
                         </div>

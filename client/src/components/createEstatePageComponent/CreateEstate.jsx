@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router-dom'
 
 import style from './CreateEstate.module.css'
 import * as estateService from "../../services/estateService"
+import formatNumberWithCommas from "../../utils/formatNumberWithCommas";
 
 import FormEstate from './Form'
 import HeaderCreate from './HeaderCreate'
@@ -15,6 +16,7 @@ export default function CreateEstate() {
     const createSubmitHandler = async (values) => {
         try {
             values.owner = `${firstName} ${lastName}`
+            // values.price = formatNumberWithCommas(values.price)
             await estateService.create(values)
 
             navigate('/catalog')

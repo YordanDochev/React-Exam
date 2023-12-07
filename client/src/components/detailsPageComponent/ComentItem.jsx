@@ -1,10 +1,8 @@
-import styles from './Home.module.css';
+import styles from './Details.module.css';
 
 
 export default function ComentItem({
-    id,
     text,
-    imageUrl,
     firstName,
     lastName
 }) {
@@ -14,8 +12,9 @@ export default function ComentItem({
                 <div className="d-flex align-items-center">
                     <img
                         className={`img-fluid flex-shrink-0 rounded ${styles.imgUserComment}`}
-                        src={imageUrl}
-                        alt={`Client ${id}`}
+                        src="/src/assets/img/person-icon.png"
+                        alt=""
+                        
                     />
                     <div className="ps-3">
                         <h6 className="fw-bold mb-1">{firstName}</h6>

@@ -2,7 +2,6 @@
 
 import HeaderHome from "./HeaderHome"
 import HotOffers from "./HotOffers"
-import CommentsCarousel from "./Comments"
 
 function Home() {
 
@@ -12,8 +11,6 @@ function Home() {
       <HeaderHome />
 
       <HotOffers />
-
-      <CommentsCarousel />
 
     </>
   )
