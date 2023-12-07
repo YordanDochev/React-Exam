@@ -77,7 +77,12 @@ const Comments = ({
                         <h1 className="mb-3">Our Clients Say!</h1>
                     </div>
                     <div className={`testimonial-carousel wow fadeInUp ${styles.userComentDiv}`} data-wow-delay="0.1s">
+                        {comments.length === 0 && (
+                            <h3 className="mb-3" style={{textAlign:"center"}}>No comments yet !</h3>
+
+                        )}
                         <Slider {...carouselSettings}>
+
                             {comments.map((comment) => (
                                 <ComentItem key={comment._id} {...comment} />
                             ))}
