@@ -4,17 +4,17 @@ import { useEffect, useState } from "react";
 import CatalogListItem from "./CatalogListItem";
 
 export default function ListCatalog() {
-    const [estates,setEstates] = useState([]);
+    const [estates, setEstates] = useState([]);
 
-    useEffect(()=>{
+    useEffect(() => {
         estateService.getAll()
             .then(setEstates)
-            .catch(err=> console.log(err));
-    },[])
+            .catch(err => console.log(err));
+    }, [])
     return (
         <>
             <div className="container-xxl py-5">
-                
+
                 <div className="container">
                     <div className="row g-0 gx-5 align-items-end divHeaderTex">
                         <div className="col-lg-6">
@@ -23,10 +23,8 @@ export default function ListCatalog() {
                                 data-wow-delay="0.1s"
                             >
                                 <h1 className="mb-3">Property Listing</h1>
-                                <p>
-                                    Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor
-                                    ut dolore lorem kasd vero ipsum sit eirmod sit diam justo
-                                    sed rebum.
+                                <p style={{textAlign:"center"}}>
+                                    Browse our extensive catalog of diverse estates. From charming apartments to luxurious villas, find your ideal property. Elevate your living experience with our comprehensive and user-friendly estate catalog.
                                 </p>
                             </div>
                         </div>
@@ -39,7 +37,7 @@ export default function ListCatalog() {
                     <div className="tab-content">
                         <div id="tab-1" className="tab-pane fade show p-0 active">
                             <div className="row g-4">
-                            {estates.map(estate => <CatalogListItem key={estate._id} estate={estate}/>)}
+                                {estates.map(estate => <CatalogListItem key={estate._id} estate={estate} />)}
 
                             </div>
                         </div>

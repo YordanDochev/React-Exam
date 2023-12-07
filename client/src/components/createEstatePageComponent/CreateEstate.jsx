@@ -16,7 +16,6 @@ export default function CreateEstate() {
     const createSubmitHandler = async (values) => {
         try {
             values.owner = `${firstName} ${lastName}`
-            // values.price = formatNumberWithCommas(values.price)
             await estateService.create(values)
 
             navigate('/catalog')

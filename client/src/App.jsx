@@ -8,10 +8,11 @@ import Details from "./components/detailsPageComponent/Details";
 import Catalog from "./components/catalogPageComponent/Catalog";
 import Register from "./components/RegisterPageComponent/Register"
 import Login from "./components/loginPageComponent/Loing"
-import Spinenr from "./components/spinnerComponent/Spinner";
 import { AuthProvider } from './contexts/authContext';
 import EditEstate from './components/editEstatePageComponent/EditEstate';
 import Search from './components/serachPageComponent/Search';
+import AuthGuard from './components/guards/AuthGuard';
+import GuestGuard from './components/guards/GuestGuard';
 
 export default function App() {
     return (
@@ -21,17 +22,18 @@ export default function App() {
                 <Routes>
                     <Route path='/' element={<Home />} />
                     <Route path='/catalog' element={<Catalog />} />
-                    <Route path='/search' element={<Search />} />
-                    <Route path='/register' element={<Register />} />
-                    <Route path='/login' element={<Login />} />
-                    <Route path='/create-estate' element={<CreateEstate />} />
                     <Route path='/:estateId-details' element={<Details />} />
-                    <Route path='/:estateId-edit' element={<EditEstate />} />
+                    <Route element={<AuthGuard />}>
+                        <Route path='/create-estate' element={<CreateEstate />} />
+                        <Route path='/search' element={<Search />} />
+                        <Route path='/:estateId-edit' element={<EditEstate />} />
+                    </Route>
+                    <Route element={<GuestGuard />}>
+                        <Route path='/register' element={<Register />} />
+                        <Route path='/login' element={<Login />} />
+                    </Route>
                 </Routes>
             </AuthProvider>
-            {/* <Spinenr/> */}
-
-
             <Footer />
             <a href="#" className="btn btn-lg btn-primary btn-lg-square back-to-top">
                 <i className="bi bi-arrow-up" />

@@ -82,8 +82,7 @@ export default function HeaderHome(){
                 Your Family
               </h1>
               <p className="animated fadeIn mb-4 pb-2">
-                Vero elitr justo clita lorem. Ipsum dolor at sed stetsit diam no. Kasd
-                rebum ipsum et diam justo clita et kasd rebum sea elitr.
+              Discover your dream home with our seamless estate platform. Explore a curated selection of properties, connect with trusted agents, and embark on a journey to find the perfect place to call home.
               </p>
               <Link
                 to={'/register'}

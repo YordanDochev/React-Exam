@@ -5,7 +5,7 @@ import { useContext } from 'react'
 import AuthContext from '../../contexts/authContext'
 
 export default function Navigation() {
-    const { isAuthenticated,logoutSubmitHandler } = useContext(AuthContext)
+    const { isAuthenticated, logoutSubmitHandler } = useContext(AuthContext)
     return (
         <div className="container-fluid nav-bar bg-transparent">
             <nav className="navbar navbar-expand-lg bg-white navbar-light py-0 px-4">
@@ -23,9 +23,11 @@ export default function Navigation() {
                     <div className="navbar-nav ms-auto">
                         <Link to="/" className="nav-item nav-link">Home</Link>
                         <Link to="/catalog" className="nav-item nav-link">Catalog</Link>
-                        <Link to="/search" className="nav-item nav-link">Search</Link>
                         {isAuthenticated && (
-                            <Link to="/create-estate" className="nav-item nav-link">Create Estate</Link>
+                            <>
+                                <Link to="/create-estate" className="nav-item nav-link">Create Estate</Link>
+                                <Link to="/search" className="nav-item nav-link">Search</Link>
+                            </>
                         )}
                     </div>
                     {isAuthenticated && (

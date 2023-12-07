@@ -5,7 +5,7 @@ export default function OurAgents() {
             <div className="container" style={{marginBottom:"40px"}}>
                 <div className={`${styles.ourAgentsDiv} text-center mx-auto mb-5 wow fadeInUp`} data-wow-delay="0.1s">
                     <h1 className="mb-3">Property Agents</h1>
-                    <p>Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
+                    <p>Meet our dedicated team of professional agents ready to guide you through every step of your real estate journey. Trust our expertise to turn your property aspirations into reality</p>
                 </div>
                 <div className="row g-4">
                     <div className="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
