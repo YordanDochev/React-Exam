@@ -38,8 +38,6 @@ const request = async (method,url,data)=>{
 
     const result = response.json()
 
-    
-
     if(!response.ok){
         throw result
     }

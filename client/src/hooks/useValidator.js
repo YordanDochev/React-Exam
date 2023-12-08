@@ -76,10 +76,10 @@ export default function useValidator() {
         }));
       }
     } else if (key === "title") {
-      if (value === "" || value.length > 30) {
+      if (value === "" || value.length > 50) {
         setErrors((state) => ({
           ...state,
-          title: "Title is required and must be 30 characters or less",
+          title: "Title is required and must be 50 characters or less",
         }));
       } else {
         if (errors.title) {
@@ -200,11 +200,11 @@ export default function useValidator() {
         }
       }
     } else if (key === "description") {
-      if (value.length > 400 || value === "") {
+      if (value.length > 600 || value === "") {
         setErrors((state) => ({
           ...state,
           description:
-            "Description is required and must be 400 characters or less",
+            "Description is required and must be 600 characters or less",
         }));
       } else {
         if (errors.description) {
@@ -259,10 +259,10 @@ export default function useValidator() {
         }
       }
     } else if (key === "comment") {
-      if (value.length > 100 || value === "") {
+      if (value.length > 300 || value === "") {
         setErrors((state) => ({
           ...state,
-          comment: "Comment is required and must be 100 characters or less",
+          comment: "Comment is required and must be 300 characters or less",
         }));
       } else {
         if (errors.comment) {

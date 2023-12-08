@@ -84,7 +84,7 @@ export default function HotOffers() {
             })
             .catch(err => console.log(err))
     }, [])
-    
+
     return (
         <div className="container-xxl py-5">
             <div className="container">
@@ -117,22 +117,62 @@ export default function HotOffers() {
                 <div className="tab-content">
                     <div id="tab-1" className="tab-pane fade show p-0 active">
                         <div className="row g-4" >
+                            {state.villas.length === 0 && (
+                                <div className="col-lg-6">
+                                    <div
+                                        className="text-start mx-auto mb-5 wow slideInLeft"
+                                        data-wow-delay="0.1s"
+                                    >
+                                        <h3 className="mb-3">There are no published villa ads</h3>
+                                    </div>
+                                </div>
+                            )}
                             {state.villas.map(villa => <Villa key={villa._id} villa={villa} />)}
                         </div>
                     </div>
 
                     <div id="tab-2" className="tab-pane fade show p-0">
                         <div className="row g-4" >
+                        {state.apartments.length === 0 && (
+                                <div className="col-lg-6">
+                                    <div
+                                        className="text-start mx-auto mb-5 wow slideInLeft"
+                                        data-wow-delay="0.1s"
+                                    >
+                                        <h3 className="mb-3">There are no published apartment ads</h3>
+                                    </div>
+                                </div>
+                            )}
                             {state.apartments.map(apartment => <Apartment key={apartment._id} apartment={apartment} />)}
                         </div>
                     </div>
                     <div id="tab-3" className="tab-pane fade show p-0">
                         <div className="row g-4" >
+                        {state.offices.length === 0 && (
+                                <div className="col-lg-6">
+                                    <div
+                                        className="text-start mx-auto mb-5 wow slideInLeft"
+                                        data-wow-delay="0.1s"
+                                    >
+                                        <h3 className="mb-3">There are no published office ads</h3>
+                                    </div>
+                                </div>
+                            )}
                             {state.offices.map(office => <Office key={office._id} office={office} />)}
                         </div>
                     </div>
                     <div id="tab-4" className="tab-pane fade show p-0">
                         <div className="row g-4" >
+                        {state.garages.length === 0 && (
+                                <div className="col-lg-6">
+                                    <div
+                                        className="text-start mx-auto mb-5 wow slideInLeft"
+                                        data-wow-delay="0.1s"
+                                    >
+                                        <h3 className="mb-3">There are no published garage ads</h3>
+                                    </div>
+                                </div>
+                            )}
                             {state.garages.map(garage => <Garage key={garage._id} garage={garage} />)}
                         </div>
                     </div>
