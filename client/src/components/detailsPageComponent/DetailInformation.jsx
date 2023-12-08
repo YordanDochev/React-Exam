@@ -43,7 +43,7 @@ export default function DetailInformation({
                                     <div className={`${styles.headerInformationDiv} icon me-3`} >
                                         <i className="fa fa-map-marker-alt text-primary" />
                                     </div>
-                                    <span>Location: {address}, {location}</span>
+                                    <span>Location: {address} - {location}</span>
                                 </div>
                             </div>
                         </div>

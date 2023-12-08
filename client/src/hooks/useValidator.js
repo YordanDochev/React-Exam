@@ -6,7 +6,7 @@ export default function useValidator() {
     if (key === "email") {
       const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
 
-      if (!isValidEmail || value === "") {
+      if (!isValidEmail || value === "" || value.length > 40) {
         setErrors((state) => ({
           ...state,
           email: "Please insert a valid Email",
@@ -35,7 +35,7 @@ export default function useValidator() {
       }
     } else if (key === "firstName") {
       const isValid = /^[a-zA-Z]+$/.test(value);
-      if (!isValid || value === "") {
+      if (!isValid || value === "" || value.length > 40) {
         setErrors((state) => ({
           ...state,
           firstName: "Please insert a valid Name",
@@ -50,7 +50,7 @@ export default function useValidator() {
       }
     } else if (key === "lastName") {
       const isValid = /^[a-zA-Z]+$/.test(value);
-      if (!isValid || value === "") {
+      if (!isValid || value === "" || value.length > 40) {
         setErrors((state) => ({
           ...state,
           lastName: "Please insert a valid Surname",

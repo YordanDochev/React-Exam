@@ -26,7 +26,14 @@ export const AuthProvider = ({
         try {
             const response = await authService.register(values)
 
-            setAuth(response)
+            const authInformation = {
+                accessToken: response.accessToken,
+                email: response.email,
+                firstName: response.firstName,
+                lastName: response.lastName,
+                _id: response._id
+            }
+            setAuth(authInformation)
             navigate('/')
         } catch (error) {
             setErrorFlag(error.message)
@@ -38,8 +45,14 @@ export const AuthProvider = ({
     const loginSubmitHandler = async (values) => {
         try {
             const response = await authService.login(values)
-
-            setAuth(response)
+            const authInformation = {
+                accessToken: response.accessToken,
+                email: response.email,
+                firstName: response.firstName,
+                lastName: response.lastName,
+                _id: response._id
+            }
+            setAuth(authInformation)
             navigate('/')
         } catch (error) {
             setErrorFlag(error.message);

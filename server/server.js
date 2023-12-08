@@ -1510,7 +1510,7 @@
     			meters: 100,
     			rooms: 1,
     			baths: 1,
-    			location: "Vinna, Austria",
+    			location: "Vienna, Austria",
     			_createdOn: 1613231313362,
     			_updatedOn: 1616236792930
     		}
