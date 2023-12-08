@@ -35,7 +35,6 @@ export default function useValidator() {
       }
     } else if (key === "firstName") {
       const isValid = /^[a-zA-Z]+$/.test(value);
-      console.log(isValid);
       if (!isValid || value === "") {
         setErrors((state) => ({
           ...state,

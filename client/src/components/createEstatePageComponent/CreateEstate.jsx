@@ -1,18 +1,17 @@
 import { useNavigate } from 'react-router-dom'
+import { useContext } from 'react'
 
 import style from './CreateEstate.module.css'
 import * as estateService from "../../services/estateService"
-import formatNumberWithCommas from "../../utils/formatNumberWithCommas";
+import AuthContext from '../../contexts/authContext'
 
 import FormEstate from './Form'
 import HeaderCreate from './HeaderCreate'
-import { useContext } from 'react'
-import AuthContext from '../../contexts/authContext'
 
 
 export default function CreateEstate() {
     const navigate = useNavigate();
-    const {firstName,lastName} = useContext(AuthContext)
+    const { firstName, lastName } = useContext(AuthContext)
     const createSubmitHandler = async (values) => {
         try {
             values.owner = `${firstName} ${lastName}`

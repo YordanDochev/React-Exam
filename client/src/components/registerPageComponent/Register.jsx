@@ -1,6 +1,5 @@
 import styles from './Register.module.css'
 
-
 import FormRegister from './FormRegiseter'
 
 export default function Register() {

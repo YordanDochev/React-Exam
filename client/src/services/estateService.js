@@ -1,87 +1,163 @@
-import * as request from '../lib/request'
+import * as request from "../lib/request";
 
-const baseUrl = 'http://localhost:3030/data/estates'
+const baseUrl = "http://localhost:3030/data/estates";
 
 export const getAll = async () => {
-    const estates = await request.get(`${baseUrl}?sortBy=_createdOn decs`)
+  try {
+    const estates = await request.get(`${baseUrl}?sortBy=_createdOn decs`);
 
-    return estates
-}
+    return estates;
+  } catch (error) {
+    throw new Error('Estates dose not exist')
+  }
+};
 
 export const getOne = async (estateId) => {
-    const estate = await request.get(`${baseUrl}/${estateId}`)
+  try {
+    const estate = await request.get(`${baseUrl}/${estateId}`);
 
-    return estate
-}
+    return estate;
+  } catch (error) {
+    throw new Error('Estate dose not exist')
+  }
+};
 
 export const create = async (estateData) => {
-    const result = await request.post(baseUrl,estateData)
-
-    return result
-}
-
-export const edit = async (estateId,estateData) => {
-    const result = await request.edit(`${baseUrl}/${estateId}`,estateData)
-
-    return result
-}
-
-export const remove = async(estateId) => await request.remove(`${baseUrl}/${estateId}`)
-
-export const getLatesVillas = async () =>{
-
-    const result = await request.get(`${baseUrl}?where=types Like "Villa"&sortBy=_createdOn decs&offset=0&pageSize=3`)
+  try {
+    const result = await request.post(baseUrl, estateData);
 
     return result;
-}
+  } catch (error) {
+    throw new Error('Request failed')
+  }
+};
 
-export const getLatesApartment = async () =>{
-
-    const result = await request.get(`${baseUrl}?where=types Like "Apartment"&sortBy=_createdOn decs&offset=0&pageSize=3`)
-
-    return result;
-}
-
-export const getLatesOffice = async () =>{
-
-    const result = await request.get(`${baseUrl}?where=types Like "Office"&sortBy=_createdOn decs&offset=0&pageSize=3`)
+export const edit = async (estateId, estateData) => {
+  try {
+    const result = await request.edit(`${baseUrl}/${estateId}`, estateData);
 
     return result;
-}
+  } catch (error) {}
+  throw new Error('Request failed')
+};
 
-export const getLatesGarage = async () =>{
+export const remove = async (estateId) => {
+  try {
+    await request.remove(`${baseUrl}/${estateId}`);
+  } catch (error) {
+    throw new Error('Estate dose not exist')
+  }
+};
 
-    const result = await request.get(`${baseUrl}?where=types Like "Garage"&sortBy=_createdOn decs&offset=0&pageSize=3`)
+export const getLatesVillas = async () => {
+  try {
+    const result = await request.get(
+      `${baseUrl}?where=types Like "Villa"&sortBy=_createdOn decs&offset=0&pageSize=3`
+    );
 
     return result;
-}
+  } catch (error) {
+    throw new Error('Villas dose not exist')
+  }
+};
+
+export const getLatesApartment = async () => {
+  try {
+    const result = await request.get(
+      `${baseUrl}?where=types Like "Apartment"&sortBy=_createdOn decs&offset=0&pageSize=3`
+    );
+
+    return result;
+  } catch (error) {
+    throw new Error('Apartments dose not exist')
+  }
+};
+
+export const getLatesOffice = async () => {
+  try {
+    const result = await request.get(
+      `${baseUrl}?where=types Like "Office"&sortBy=_createdOn decs&offset=0&pageSize=3`
+    );
+
+    return result;
+  } catch (error) {
+    throw new Error('Offices dose not exist')
+
+  }
+};
+
+export const getLatesGarage = async () => {
+  try {
+    const result = await request.get(
+      `${baseUrl}?where=types Like "Garage"&sortBy=_createdOn decs&offset=0&pageSize=3`
+    );
+
+    return result;
+  } catch (error) {
+    throw new Error('Garages dose not exist')
+
+  }
+};
 
 export const getCountVillas = async () => {
-    const count = await request.get(`${baseUrl}?where=types Like "Villa"&count`)
+  try {
+    const count = await request.get(
+      `${baseUrl}?where=types Like "Villa"&count`
+    );
 
     return count;
-}
+  } catch (error) {
+    throw new Error('Villas dose not exist')
+
+  }
+};
 
 export const getCountApartments = async () => {
-    const count = await request.get(`${baseUrl}?where=types Like "Apartment"&count`)
+  try {
+    const count = await request.get(
+      `${baseUrl}?where=types Like "Apartment"&count`
+    );
 
     return count;
-}
+  } catch (error) {
+    throw new Error('Apartments dose not exist')
+
+  }
+};
 
 export const getCountOffices = async () => {
-    const count = await request.get(`${baseUrl}?where=types Like "Office"&count`)
+  try {
+    const count = await request.get(
+      `${baseUrl}?where=types Like "Office"&count`
+    );
 
     return count;
-}
+  } catch (error) {
+    throw new Error('Offices dose not exist')
+  }
+};
 
 export const getCountGarages = async () => {
-    const count = await request.get(`${baseUrl}?where=types Like "Garage"&count`)
+  try {
+    const count = await request.get(
+      `${baseUrl}?where=types Like "Garage"&count`
+    );
 
     return count;
-}
+  } catch (error) {
+    throw new Error('Garages dose not exist')
 
-export const search = async (type,location,minPrice,maxPrice) => {
-    const estates = await request.get(`${baseUrl}?where=price > ${minPrice} AND price < ${maxPrice} AND types LIKE "${type}" AND location LIKE "${location}"`)
+  }
+};
 
-    return estates
-}
+export const search = async (type, location, minPrice, maxPrice) => {
+  try {
+    const estates = await request.get(
+      `${baseUrl}?where=price > ${minPrice} AND price < ${maxPrice} AND types LIKE "${type}" AND location LIKE "${location}"`
+    );
+
+    return estates;
+  } catch (error) {
+    throw new Error('Estates dose not exist')
+  }
+};

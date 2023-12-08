@@ -54,6 +54,9 @@ export const AuthProvider = ({
             setAuth({})
             navigate('/')
         } catch (error) {
+            setErrorFlag(error.message);
+
+            console.log(error.message)
             setAuth({})
             navigate('/')
             console.log(error);

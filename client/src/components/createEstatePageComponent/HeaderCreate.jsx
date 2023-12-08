@@ -1,4 +1,5 @@
 import styles from './CreateEstate.module.css'
+
 export default function HeaderCreate() {
     return (
             <div className="row g-0 align-items-center flex-column-reverse flex-md-row">

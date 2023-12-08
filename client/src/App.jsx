@@ -1,5 +1,7 @@
 import { Routes, Route } from 'react-router-dom'
 
+import { AuthProvider } from './contexts/authContext';
+
 import Home from "./components/homePageComponent/Home"
 import CreateEstate from "./components/CreateEstatePageComponent/CreateEstate";
 import Navigation from "./components/navigationComponent/Navigation";
@@ -8,11 +10,11 @@ import Details from "./components/detailsPageComponent/Details";
 import Catalog from "./components/catalogPageComponent/Catalog";
 import Register from "./components/RegisterPageComponent/Register"
 import Login from "./components/loginPageComponent/Loing"
-import { AuthProvider } from './contexts/authContext';
 import EditEstate from './components/editEstatePageComponent/EditEstate';
 import Search from './components/serachPageComponent/Search';
 import AuthGuard from './components/guards/AuthGuard';
 import GuestGuard from './components/guards/GuestGuard';
+import NotFound from './components/404PageComponent/NotFound';
 
 export default function App() {
     return (
@@ -32,6 +34,7 @@ export default function App() {
                         <Route path='/register' element={<Register />} />
                         <Route path='/login' element={<Login />} />
                     </Route>
+                    <Route path='*' element={<NotFound />} />
                 </Routes>
             </AuthProvider>
             <Footer />

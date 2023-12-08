@@ -1,12 +1,11 @@
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
-
-import styles from './Details.module.css'
-import formatNumberWithCommas from "../../utils/formatNumberWithCommas";
-
 import Carousel from 'react-bootstrap/Carousel';
 import Button from 'react-bootstrap/Button';
-import { useContext } from 'react';
+
+import styles from './Details.module.css'
 import AuthContext from '../../contexts/AuthContext';
+
 
 export default function DetailInformation({
     _id,

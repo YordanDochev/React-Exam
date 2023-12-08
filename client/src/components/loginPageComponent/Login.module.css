@@ -1,20 +1,20 @@
 .registerForm {
     margin: auto;
     width: 50%;
-    border: 3px ;
+    border: 3px;
     padding: 10px;
 }
 
-.registerRedirect{
+.registerRedirect {
     text-align: right;
 }
 
-.singInHeader{
+.singInHeader {
     max-width: 700px;
     background-color: #00B98E;
 }
 
-.singInH1{
+.singInH1 {
     color: white;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -26,36 +26,30 @@
 
 }
 
-.singUpLink{
+.singUpLink {
     font-weight: bold;
     font-size: 17px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.loginButton{
+.loginButton {
     font-weight: bold;
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.input{
-    max-width: 400px;
-    margin-left:190px;
-}
-
-.label{
-    max-width: 400px;
-    margin-left:215px;
-}
-
-.loginDiv{
+.loginDiv {
     margin-top: 94px;
     margin-bottom: 70px;
 }
 
 .errorMessage{
     color: red;
-    font-size: 1em;
+    font-size: 0.8em;
     margin: 10px 0 0;
-    text-align: center;
+    margin-left: 140px;
+}
+
+.divLogin {
+    padding-bottom: 86px;
 }

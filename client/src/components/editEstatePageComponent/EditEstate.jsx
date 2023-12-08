@@ -1,23 +1,9 @@
-import { useNavigate } from 'react-router-dom'
-
 import style from './EditEstate.module.css'
-import * as estateService from "../../services/estateService"
 
 import FormEstate from './Form'
 import  HeaderEdit from './HeaderEdit'
 
 export default function EditEstate() {
-    // const navigate = useNavigate();
-    // const createSubmitHandler = async (values) => {
-    //     try {
-           
-    //         await estateService.create(values)
-
-    //         navigate('/catalog')
-    //     } catch (error) {
-    //         console.log(error);
-    //     }
-    // }
     return (
         <div className="container-fluid header bg-white p-0">
             <HeaderEdit />

@@ -1,6 +1,8 @@
 
-import * as estateService from '../../services/estateService'
 import { useEffect, useState } from "react";
+
+import * as estateService from '../../services/estateService'
+
 import CatalogListItem from "./CatalogListItem";
 
 export default function ListCatalog() {
@@ -41,7 +43,6 @@ export default function ListCatalog() {
 
                             </div>
                         </div>
-                        {/* If the time is not finished - do this (idea with Apartment/House) */}
                     </div>
                 </div>
             </div>

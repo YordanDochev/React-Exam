@@ -6,9 +6,10 @@ import 'slick-carousel/slick/slick-theme.css';
 
 import styles from './Details.module.css';
 import * as commentService from '../../services/commentService'
-import ComentItem from './ComentItem';
-import AuthContext from '../../contexts/authContext';
 import useForm from '../../hooks/useForm';
+import AuthContext from '../../contexts/authContext';
+
+import ComentItem from './ComentItem';
 
 const carouselSettings = {
     dots: true,
@@ -46,7 +47,6 @@ const Comments = ({
     }, [estateId])
 
     const addComentHandler = async (values) => {
-        // console.log(values);
         try {
             const newComment = await commentService.postComment(estateId, values.comment, firstName, lastName)
 

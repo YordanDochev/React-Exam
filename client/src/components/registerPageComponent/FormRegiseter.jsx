@@ -1,5 +1,6 @@
 import { useContext } from 'react'
 import useForm from '../../hooks/useForm'
+
 import styles from './Register.module.css'
 import AuthContext from '../../contexts/authContext';
 import useValidator from '../../hooks/useValidator';
@@ -125,7 +126,7 @@ export default function FormRegister() {
                         Register
                     </button>
                     {errorFlag !== "" && (
-                        <p className={styles.errorMessage}>The user does not exist , please insert the correct email and password!</p>
+                        <p className={styles.errorMessage}>The user already exist!</p>
                     )}
                 </div>
                 <div className={styles.loingRedirect}>

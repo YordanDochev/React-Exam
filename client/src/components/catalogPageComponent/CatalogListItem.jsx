@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import formatNumberWithCommas from "../../utils/formatNumberWithCommas";
 
+import formatNumberWithCommas from "../../utils/formatNumberWithCommas";
 
 export default function CatalogListItem({
     estate

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
+import { useContext } from 'react'
 
 import styles from './Navigation.module.css'
-import { useContext } from 'react'
 import AuthContext from '../../contexts/authContext'
 
 export default function Navigation() {
