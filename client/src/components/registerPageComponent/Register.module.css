@@ -34,7 +34,6 @@
 
 .errorMessage{
     color: red;
-    font-size: 1em;
+    font-size: 0.8em;
     margin: 10px 0 0;
-    text-align: center;
 }

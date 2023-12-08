@@ -1,20 +1,13 @@
 import styles from './Login.module.css'
 import useForm from '../../hooks/useForm'
-import { useContext, useState } from 'react'
+import { useContext } from 'react'
 import AuthContext from '../../contexts/authContext'
 import useValidator from '../../hooks/useValidator'
-
-const initialValues = {
-    email: '',
-    password: ''
-}
 
 const LoginFormKyes = {
     Email: 'email',
     Password: 'password',
 };
-
-
 
 export default function FormLogin() {
 
@@ -25,46 +18,8 @@ export default function FormLogin() {
         [LoginFormKyes.Password]: '',
     }, loginSubmitHandler)
 
-   
     const { errors, validatorHandler } = useValidator()
 
-    
-    // const [errors, setErros] = useState({})
-    // const emailValidatorHandler = () => {
-    //     const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.email)
-
-    //     if (!isValidEmail || values.email === "") {
-    //         setErros(state => ({
-    //             ...state,
-    //             email: 'Please insert a valid email'
-    //         }))
-    //     } else {
-    //         if (errors.email) {
-    //             setErros(state => ({
-    //                 ...state,
-    //                 email: ''
-    //             }))
-    //         }
-    //     }
-    // }
-
-    // const passwordValidatorHandler = () => {
-
-    //     if (values.password === "") {
-    //         setErros(state => ({
-    //             ...state,
-    //             password: 'Please insert password'
-    //         }))
-    //     } else {
-    //         if (errors.password) {
-    //             setErros(state => ({
-    //                 ...state,
-    //                 password: ''
-    //             }))
-    //         }
-    //     }
-
-    // }
 
     return (
         <form onSubmit={onSubmit}>
