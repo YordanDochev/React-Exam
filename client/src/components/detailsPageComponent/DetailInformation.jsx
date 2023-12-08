@@ -5,6 +5,7 @@ import Button from 'react-bootstrap/Button';
 
 import styles from './Details.module.css'
 import AuthContext from '../../contexts/AuthContext';
+import formatNumberWithCommas from '../../utils/formatNumberWithCommas';
 
 
 export default function DetailInformation({
@@ -66,7 +67,7 @@ export default function DetailInformation({
                                     <div className={`${styles.headerInformationElements} icon me-3`}>
                                         <img src="src/assets/img/icon-deal.png" alt="" />
                                     </div>
-                                    <span>Price: {price} $</span>
+                                    <span>Price: {formatNumberWithCommas(Number(price))} $</span>
                                 </div>
                             </div>
                         </div>

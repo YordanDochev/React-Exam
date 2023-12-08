@@ -248,14 +248,27 @@ export default function useValidator() {
       if (value.length > 30 || value === "") {
         setErrors((state) => ({
           ...state,
-          location:
-            "Location is required and must be 30 characters or less",
+          location: "Location is required and must be 30 characters or less",
         }));
       } else {
         if (errors.location) {
           setErrors((state) => ({
             ...state,
             location: "",
+          }));
+        }
+      }
+    } else if (key === "comment") {
+      if (value.length > 100 || value === "") {
+        setErrors((state) => ({
+          ...state,
+          comment: "Comment is required and must be 100 characters or less",
+        }));
+      } else {
+        if (errors.comment) {
+          setErrors((state) => ({
+            ...state,
+            comment: "",
           }));
         }
       }

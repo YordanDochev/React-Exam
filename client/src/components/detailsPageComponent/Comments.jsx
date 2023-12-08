@@ -10,6 +10,7 @@ import useForm from '../../hooks/useForm';
 import AuthContext from '../../contexts/authContext';
 
 import ComentItem from './ComentItem';
+import useValidator from '../../hooks/useValidator';
 
 const carouselSettings = {
     dots: true,
@@ -37,6 +38,7 @@ const Comments = ({
     const { estateId } = useParams()
     const { firstName, lastName, isAuthenticated, userId } = useContext(AuthContext)
     const [comments, dispatch] = useReducer(reducer, [])
+    const { errors, validatorHandler } = useValidator()
 
     useEffect(() => {
         commentService.getAllComments(estateId)
@@ -56,6 +58,7 @@ const Comments = ({
                 type: "ADD_COMMENT",
                 payload: newComment
             })
+            values.comment = ""
         } catch (error) {
             console.log(error);
         }
@@ -78,7 +81,7 @@ const Comments = ({
                     </div>
                     <div className={`testimonial-carousel wow fadeInUp ${styles.userComentDiv}`} data-wow-delay="0.1s">
                         {comments.length === 0 && (
-                            <h3 className="mb-3" style={{textAlign:"center"}}>No comments yet !</h3>
+                            <h3 className="mb-3" style={{ textAlign: "center" }}>No comments yet !</h3>
 
                         )}
                         <Slider {...carouselSettings}>
@@ -112,14 +115,23 @@ const Comments = ({
                                     style={{ width: "900px", marginLeft: "215px" }}
                                     value={values.comment}
                                     onChange={onChangeHandler}
+                                    onBlur={() => validatorHandler("comment", values.comment)}
                                 />
                                 <label htmlFor="lastName" style={{ marginLeft: "215px" }}>Your thoughts</label>
 
                             </div>
 
                         </div>
+                        {errors.comment && (
+                            <p className={styles.errorMessage}>{errors.comment}</p>
+                        )}
                         <div className={`col-12 ${styles.divButtonComment}`} >
-                            <button className="btn btn-primary w-100 py-3" type="submit" style={{ maxWidth: "500px" }}>
+                            <button
+                            className="btn btn-primary w-100 py-3"
+                            type="submit"
+                            style={{ maxWidth: "500px" }}
+                            disabled = {Object.values(errors).some(err=>err) || values.comment === ""} 
+                            >
                                 Comment
                             </button>
                         </div>

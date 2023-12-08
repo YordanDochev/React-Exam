@@ -41,7 +41,7 @@
     border: 1px dashed rgba(0, 185, 142, .3)
 }
 
-.divButtonComment{
+.divButtonComment {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -49,16 +49,22 @@
     padding-bottom: 50px;
 }
 
-.userComentDiv{
+.userComentDiv {
     width: 1000px;
     margin-left: 140px
 }
 
-.divComment{
+.divComment {
     max-width: 600px
 }
 
 .imgUserComment {
     height: 45px;
     width: 45px;
+}
+
+.errorMessage {
+    color: red;
+    font-size: 0.8em;
+    margin: 10px 220px 0 ;
 }

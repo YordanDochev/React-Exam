@@ -1321,17 +1321,20 @@
     	users: {
     		"35c62d76-8152-4626-8712-eeb96381bea8": {
     			email: "peter@abv.bg",
-    			username: "Peter",
+    			firstName: "Peter",
+    			lastName: "Johnson",
     			hashedPassword: "83313014ed3e2391aa1332615d2f053cf5c1bfe05ca1cbcb5582443822df6eb1"
     		},
     		"847ec027-f659-4086-8032-5173e2f9c93a": {
     			email: "george@abv.bg",
-    			username: "George",
+    			firstName: "George",
+    			lastName: "Smith",
     			hashedPassword: "83313014ed3e2391aa1332615d2f053cf5c1bfe05ca1cbcb5582443822df6eb1"
     		},
     		"60f0cf0b-34b0-4abd-9769-8c42f830dffc": {
     			email: "admin@abv.bg",
-    			username: "Admin",
+    			firstName: "Ethan",
+    			lastName: "Williams",
     			hashedPassword: "fac7060c3e17e6f151f247eacb2cd5ae80b8c36aedb8764e18a41bbdc16aa302"
     		}
     	},
@@ -1342,7 +1345,7 @@
     	estates: {
     		"cc9b0a0f-655d-45d7-9857-0a61c6bb2c4d": {
     			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    			owner: "Yordan Dochev",
+    			owner: "Peter Johnson",
     			_id: "cc9b0a0f-655d-45d7-9857-0a61c6bb2c4d",
     			title: "Las Vegas Sotheby's International",
     			price: 2102600,
@@ -1361,7 +1364,7 @@
     		},
     		"ff9b0a0f-65sd-45d7-9857-0a60a6gc2cm4": {
     			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    			owner: "Yordan Dochev",
+    			owner: "Peter Johnson",
     			_id: "ff9b0a0f-65sd-45d7-9857-0a60a6gc2cm4",
     			title: "Modern Art-Filled Villa near Club 55 ",
     			price: 6112000,
@@ -1380,7 +1383,7 @@
     		},
     		"ff9b0a0f-65sd-45d7-9957-0a60a6gc2cm4": {
     			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    			owner: "Yordan Dochev",
+    			owner: "Peter Johnson",
     			_id: "ff9b0a0f-65sd-45d7-9957-0a60a6gc2cm4",
     			title: "Villa Gaïa",
     			price: 10000000,
@@ -1399,7 +1402,7 @@
     		},
     		"ff9b0a0f-65sd-45d7-9817-0a60a6gc2cm4": {
     			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    			owner: "Yordan Dochev",
+    			owner: "Peter Johnson",
     			_id: "ff9b0a0f-65sd-45d7-9817-0a60a6gc2cm4",
     			title: "Luxury Apartment with 4 rooms, Barcelona",
     			price: 512000,
@@ -1418,7 +1421,7 @@
     		},
     		"ac9b0a0f-00ab-45d7-9817-0a60asa91asd": {
     			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    			owner: "Yordan Dochev",
+    			owner: "Peter Johnson",
     			_id: "ac9b0a0f-00ab-45d7-9817-0a60asa91asd",
     			title: "Apartment with 3 rooms in center of Berlin",
     			price: 312000,
@@ -1437,7 +1440,7 @@
     		},
     		"nvasd20f-19am-48a7-as01-as1has61233d": {
     			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    			owner: "Yordan Dochev",
+    			owner: "Peter Johnson",
     			_id: "nvasd20f-19am-48a7-as01-as1has61233d",
     			title: "Dream Apartment in the Heart of Istanbul",
     			price: 550000,
@@ -1456,7 +1459,7 @@
     		},
     		"ff9b0a0f-65sd-45d7-9817-0a60a6gsc2cm4": {
     			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    			owner: "Yordan Dochev",
+    			owner: "Peter Johnson",
     			_id: "ff9b0a0f-65sd-45d7-9817-0a60a6gsc2cm4",
     			title: "Modern Office in New York",
     			price: 800000,
@@ -1475,7 +1478,7 @@
     		},
     		"sad13s13-sdas-1235-5123-sadt14f1321f1": {
     			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    			owner: "Yordan Dochev",
+    			owner: "Peter Johnson",
     			_id: "sad13s13-sdas-1235-5123-sadt14f1321f1",
     			title: "Prime Office Spaces in the Heart of Austin",
     			price: 650000,
@@ -1494,7 +1497,7 @@
     		},
     		"addaas12-1912-asde-51c1-gjt243f13fh1t": {
     			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    			owner: "Yordan Dochev",
+    			owner: "Peter Johnson",
     			_id: "addaas12-1912-asde-51c1-gjt243f13fh1t",
     			title: "Premier Garages in Vienna for Your Automotive Bliss",
     			price: 50000,

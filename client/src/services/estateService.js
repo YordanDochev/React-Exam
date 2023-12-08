@@ -161,3 +161,15 @@ export const search = async (type, location, minPrice, maxPrice) => {
     throw new Error('Estates dose not exist')
   }
 };
+
+export const getMyPosts = async (ownerId) => {
+  try {
+    const estates = await request.get(
+      `${baseUrl}?where=_ownerId LIKE "${ownerId}"`
+    );
+
+    return estates;
+  } catch (error) {
+    throw new Error('Estates dose not exist')
+  }
+};

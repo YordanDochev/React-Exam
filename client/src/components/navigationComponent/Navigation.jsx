@@ -27,6 +27,7 @@ export default function Navigation() {
                             <>
                                 <Link to="/create-estate" className="nav-item nav-link">Create Estate</Link>
                                 <Link to="/search" className="nav-item nav-link">Search</Link>
+                                <Link to="/my-posts" className="nav-item nav-link">My Posts</Link>
                             </>
                         )}
                     </div>

@@ -15,6 +15,7 @@ import Search from './components/serachPageComponent/Search';
 import AuthGuard from './components/guards/AuthGuard';
 import GuestGuard from './components/guards/GuestGuard';
 import NotFound from './components/404PageComponent/NotFound';
+import MyPosts from './components/myPoststPageComponent/MyPosts';
 
 export default function App() {
     return (
@@ -29,6 +30,7 @@ export default function App() {
                         <Route path='/create-estate' element={<CreateEstate />} />
                         <Route path='/search' element={<Search />} />
                         <Route path='/:estateId-edit' element={<EditEstate />} />
+                        <Route path='/my-posts' element={<MyPosts />} />
                     </Route>
                     <Route element={<GuestGuard />}>
                         <Route path='/register' element={<Register />} />
