@@ -2,13 +2,14 @@ import * as request from "../lib/request";
 
 const baseUrl = "http://localhost:3030/users";
 
-export const register = async ({ email, firstName, lastName, password }) => {
+export const register = async ({ email, firstName, lastName, password, rePassword}) => {
   try {
     const response = await request.post(`${baseUrl}/register`, {
       email,
       firstName,
       lastName,
       password,
+      rePassword
     });
 
     return response;

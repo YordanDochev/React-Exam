@@ -23,6 +23,7 @@ export const AuthProvider = ({
     };
 
     const registerSubmitHanler = async (values) => {
+        console.log(values);
         try {
             const response = await authService.register(values)
 
