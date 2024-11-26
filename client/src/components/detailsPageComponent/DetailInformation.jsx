@@ -4,8 +4,8 @@ import Carousel from 'react-bootstrap/Carousel';
 import Button from 'react-bootstrap/Button';
 
 import styles from './Details.module.css'
-import AuthContext from '../../contexts/AuthContext';
 import formatNumberWithCommas from '../../utils/formatNumberWithCommas';
+import AuthContext from '../../contexts/authContext';
 
 
 export default function DetailInformation({
