@@ -23,7 +23,6 @@ export const AuthProvider = ({
     };
 
     const registerSubmitHanler = async (values) => {
-        console.log(values);
         try {
             const response = await authService.register(values)
 
@@ -38,7 +37,6 @@ export const AuthProvider = ({
             navigate('/')
         } catch (error) {
             setErrorFlag(error.message)
-            console.log(error.message);
         }
 
     }
@@ -57,8 +55,6 @@ export const AuthProvider = ({
             navigate('/')
         } catch (error) {
             setErrorFlag(error.message);
-
-            console.log(error.message)
         }
     }
 
@@ -70,10 +66,8 @@ export const AuthProvider = ({
         } catch (error) {
             setErrorFlag(error.message);
 
-            console.log(error.message)
             setAuth({})
             navigate('/')
-            console.log(error);
         }
     }
 
